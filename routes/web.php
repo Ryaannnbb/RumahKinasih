@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListProdukUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +36,18 @@ Route::get('/test', function () {
 });
 Route::get('/testadmin', function () {
     return view('testadmin');
+});
+
+
+
+Route::controller(ListProdukUserController::class)->prefix('produk')->group(function () {
+    Route::get('/', 'index')->name('produk');
+});
+
+Route::controller(HomepageController::class)->prefix('homepage')->group(function () {
+    Route::get('/', 'index')->name('homepage');
+});
+
+Route::controller(DashboardController::class)->prefix('dashboard')->group(function () {
+    Route::get('/', 'index')->name('dashboard');
 });
