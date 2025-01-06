@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Batik extends Model
 {
     use HasFactory;
+    protected $table  = 'tb_batik';
+    protected $guarded = [];
 }

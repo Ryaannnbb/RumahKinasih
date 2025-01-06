@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batik;
 use Illuminate\Http\Request;
 
 class BatikController extends Controller
@@ -11,7 +12,8 @@ class BatikController extends Controller
      */
     public function index()
     {
-        //
+        $batik = Batik::all();
+        return view('admin.batik.index', compact('batik'));
     }
 
     /**
@@ -19,7 +21,7 @@ class BatikController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.batik.create');
     }
 
     /**
@@ -27,7 +29,8 @@ class BatikController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Batik::create($request->all());
+        return redirect()->route('batik.index');
     }
 
     /**

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tb_batik', function (Blueprint $table) {
             $table->id();
+            $table->integer('bahan_batik_id');
+            $table->string('seri_produk');
+            $table->integer('stok');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }
