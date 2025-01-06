@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('landingpage');
 });
 Route::get('/home', function () {
-    return view('homepage');
+    return view('admin.kategori.index');
 });
 Route::get('/kain', function () {
     return view('admin_kain');
