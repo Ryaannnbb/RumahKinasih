@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\BatikController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BatikController;
+use App\Http\Middleware\RedirectMiddleware;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ListProdukUserController;
 
 /*
@@ -25,7 +27,7 @@ Route::get('/', function () {
 });
 Route::get('/kain', function () {
     return view('admin_kain');
-});
+})->name('kain');
 Route::get('/batik', function () {
     return view('admin_batik');
 });
@@ -59,4 +61,13 @@ Route::controller(HomepageController::class)->prefix('homepage')->group(function
 
 Route::controller(DashboardController::class)->prefix('dashboard')->group(function () {
     Route::get('/', 'index')->name('dashboard');
+});
+
+// ADMIN
+Route::middleware([RedirectMiddleware::class])->group(function () {
+    Route::controller(AuthController::class)->group(function () {
+        Route::get('/login', 'login')->name('login');
+        Route::post('/postlogin', 'postlogin')->name('postlogin');
+        Route::get('/logout', 'logout')->name('logout');
+    });
 });

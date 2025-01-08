@@ -11,9 +11,18 @@
         <ul class="navbar-nav flex-column" id="navbarVerticalNav">
           <li class="nav-item">
             <!-- parent pages-->
+            <div class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}" data-bs-toggle="" aria-expanded="false">
+                <div class="d-flex align-items-center">
+                  <span class="nav-link-icon"><span data-feather="pie-chart"></span></span>
+                  <span class="nav-link-text">Dashboard</span>
+                </div>
+              </a>
+            </div>
             <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#nv-home" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-home">
                 <div class="d-flex align-items-center">
-                  <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div><span class="nav-link-icon"><span data-feather="pie-chart"></span></span><span class="nav-link-text">Home</span>
+                  <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div>
+                  <span class="nav-link-icon"><span data-feather="pie-chart"></span></span>
+                  <span class="nav-link-text">Home</span>
                 </div>
               </a>
               <div class="parent-wrapper label-1">
@@ -35,7 +44,6 @@
               </div>
             </div>
           </li>
-
         </ul>
       </div>
     </div>
@@ -377,7 +385,7 @@
                   <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
                 </ul>
                 <hr />
-                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="{{ route('logout') }}"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
                 <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
               </div>
             </div>
