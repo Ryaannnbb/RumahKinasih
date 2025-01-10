@@ -13,7 +13,37 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function postlogin(Request $request)
+    public function register() {
+        return view('auth.register');
+    }
+
+    public function postRegister(Request $request)
+    {
+        $rules = [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'role' => 'waiting', // Set role to waiting
+        ]);
+
+        return redirect()->route('login')->with('waiting', 'Registration successful, waiting for admin approval.');
+    }
+
+    public function postLogin(Request $request)
     {
         // dd($request->all());
         $rules = [

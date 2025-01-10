@@ -6,6 +6,7 @@ use App\Http\Controllers\BahanController;
 use App\Http\Controllers\BatikController;
 use App\Http\Middleware\RedirectMiddleware;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\AdminListController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ListProdukUserController;
 
@@ -72,11 +73,19 @@ Route::controller(DashboardController::class)->prefix('dashboard')->group(functi
     Route::get('/', 'index')->name('dashboard');
 });
 
+Route::controller(AdminListController::class)->prefix('adminlist')->group(function () {
+    Route::get('/', 'index')->name('adminlist');
+    Route::patch('approve/{id}', 'update')->name('adminlist.approve');
+    Route::delete('destroy/{id}', 'destroy')->name('adminlist.destroy');
+});
+
 // ADMIN
 Route::middleware([RedirectMiddleware::class])->group(function () {
     Route::controller(AuthController::class)->group(function () {
         Route::get('/login', 'login')->name('login');
-        Route::post('/postlogin', 'postlogin')->name('postlogin');
+        Route::get('/register', 'register')->name('register');
+        Route::post('/postregister', 'postRegister')->name('postregister');
+        Route::post('/postlogin', 'postLogin')->name('postlogin');
         Route::get('/logout', 'logout')->name('logout');
     });
 });

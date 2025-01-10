@@ -249,12 +249,10 @@
               </thead>
               <tbody>
                 @foreach ($bahan as $b)
-                    {{-- <tr>
+                    <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$b->bahan->bahan}}</td>
-                        <td>{{$b->seri_produk}}</td>
-                        <td>{{$b->stok}}</td>
-                        <td>{{$b->deskripsi}}</td>
+                        <td>{{$b->nama_bahan}}</td>
+                        <td>{{$b->harga}}</td>
                         <td>
                             <img src="{{ asset('storage/' . $b->Gambar_Produk) }}" alt="Gambar Produk" style="max-width: 100px; max-height: 100px;">
                         </td>
@@ -269,7 +267,7 @@
                               </div>
                             </div>
                           </td>
-                    </tr> --}}
+                    </tr>
                     <tr class="position-static">
                         <td class="fs--1 align-middle">
                           <div class="form-check mb-0 fs-0"><input class="form-check-input" type="checkbox" data-bulk-select-row='{"product":"iPhone 13 pro max-Pacific Blue-128GB storage","productImage":"/products/2.png","price":"$87","category":"Furniture","tags":["Class","Camera","Discipline","invincible","Pro","Swag"],"star":true,"vendor":"Beatrice Furnitures","publishedOn":"Nov 11, 7:36 PM"}' /></div>
