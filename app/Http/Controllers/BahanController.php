@@ -14,7 +14,6 @@ class BahanController extends Controller
     {
         $bahan = Bahan::all();
         return view ('admin.bahan.index', compact('bahan'));
-
     }
 
     /**
@@ -30,6 +29,17 @@ class BahanController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_bahan' => 'required|string|max:255',
+            'harga' => 'required|integer',
+        ], [
+            'nama_bahan.required' => 'Nama bahan wajib diisi.',
+            'nama_bahan.string' => 'Nama bahan harus berupa teks.',
+            'nama_bahan.max' => 'Nama bahan maksimal 255 karakter.',
+            'harga.required' => 'Harga wajib diisi.',
+            'harga.integer' => 'Harga harus berupa angka.',
+        ]);
+
         Bahan::create($request->all());
         return redirect()->route('bahan.index');
     }
@@ -56,8 +66,19 @@ class BahanController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'nama_bahan' => 'required|string|max:255',
+            'harga' => 'required|integer',
+        ], [
+            'nama_bahan.required' => 'Nama bahan wajib diisi.',
+            'nama_bahan.string' => 'Nama bahan harus berupa teks.',
+            'nama_bahan.max' => 'Nama bahan maksimal 255 karakter.',
+            'harga.required' => 'Harga wajib diisi.',
+            'harga.integer' => 'Harga harus berupa angka.',
+        ]);
+
         $bahan= Bahan::find($id);
-        $bahan->update($request->except('_token','submit'));
+        $bahan->update($request->all());
         return redirect()->route('bahan.index');
     }
 
@@ -67,7 +88,11 @@ class BahanController extends Controller
     public function destroy(string $id)
     {
         $bahan = Bahan::find($id);
-        $bahan->delete();
-        return redirect()->route('bahan.index');
+        try {
+            $bahan->delete();
+            return redirect()->route('bahan.index')->with('success', 'Data bahan berhasil dihapus!');
+        } catch (\Throwable $th) {
+            return redirect()->route('bahan.index')->with('error', 'Gagal menghapus karena data bahan sedang digunakan!');
+        }
     }
 }

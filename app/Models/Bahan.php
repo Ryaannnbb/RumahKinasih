@@ -13,7 +13,8 @@ class Bahan extends Model
         'nama_bahan',
         'harga'
     ];
-    public function bahan(){
-        return $this->belongsTo(Bahan::class);
+
+    public function batik(){
+        return $this->hasMany(Batik::class);
     }
 }

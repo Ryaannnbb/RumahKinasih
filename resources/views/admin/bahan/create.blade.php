@@ -1,7 +1,6 @@
 @extends('admin.layout.app')
 
 @section('main')
-
 <div class="content">
     <form class="form-horizontal" action="{{ route('bahan.store') }}" method="POST">
         @csrf
@@ -16,7 +15,7 @@
             </div>
         </div>
         <div class="row g-5">
-            <div class="col-12 col-xl-8">
+            <div class="col-12 col-xl-12">
                 <div class="mb-3">
                     <label for="nama_bahan"><h4 class="mb-3">nama_bahan</h4></label>
                     <input class="form-control @error('nama_bahan') is-invalid @enderror" id="namabatik" type="text" placeholder="masukkan nama bahan" name="nama_bahan" value="{{ old('nama_bahan') }}"/>
@@ -26,12 +25,11 @@
                 </div>
                 <div class="mb-6">
                     <label for="harga"><h4 class="mb-3">harga</h4></label>
-                    <input class="form-control @error('harga') is-invalid @enderror" id="harga" type="number" name="harga" placeholder="masukkan harga bahan">{{ old('harga') }}</input>
+                    <input class="form-control @error('harga') is-invalid @enderror" id="harga" type="number" name="harga" placeholder="masukkan harga bahan" value="{{ old('harga') }}"/>
                     @error('harga')
                         <strong class="invalid-feedback">{{ $message }}</strong>
                     @enderror
                 </div>
-
             </div>
         </div>
     </form>
