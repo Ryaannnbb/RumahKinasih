@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('harga');
             $table->integer('stok');
             $table->string('seri_produk');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }
