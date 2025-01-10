@@ -24,6 +24,9 @@ use App\Http\Controllers\ListProdukUserController;
 Route::get('/', function () {
     return view('landingpage');
 });
+Route::get('/listproduk', function () {
+    return view('homepage');
+});
 Route::get('/home', function () {
     return view('admin.kategori.index');
 });
