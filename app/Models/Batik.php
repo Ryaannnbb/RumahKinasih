@@ -18,7 +18,8 @@ class Batik extends Model
         'seri_produk',
         'deskripsi'
     ];
-    public function batik(){
-        return $this->hasMany(Batik::class);
+
+    public function bahan(){
+        return $this->belongsTo(Bahan::class);
     }
 }

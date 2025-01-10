@@ -72,7 +72,7 @@ Route::controller(HomepageController::class)->prefix('homepage')->group(function
     Route::get('/', 'index')->name('homepage');
 });
 
-Route::controller(DashboardController::class)->prefix('dashboard')->group(function () {
+Route::controller(DashboardControtller::class)->prefix('dashboard')->group(function () {
     Route::get('/', 'index')->name('dashboard');
 });
 
