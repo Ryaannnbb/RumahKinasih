@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BahanController;
 use App\Http\Controllers\BatikController;
 use App\Http\Middleware\RedirectMiddleware;
 use App\Http\Controllers\HomepageController;
@@ -21,9 +22,9 @@ use App\Http\Controllers\ListProdukUserController;
 
 Route::get('/', function () {
     return view('landingpage');
-// });
-// Route::get('/home', function () {
-//     return view('admin.kategori.index');
+});
+Route::get('/home', function () {
+    return view('admin.kategori.index');
 });
 Route::get('/kain', function () {
     return view('admin_kain');
@@ -51,6 +52,14 @@ Route::controller(BatikController::class)->prefix('batik')->group(function (){
     Route::delete('destroy/{id}','destroy')->name('batik.destroy');
 });
 
+Route::controller(BahanController::class)->prefix('bahan')->group(function (){
+    Route::get('/','index')->name('bahan.index');
+    Route::get('create','create')->name('bahan.create');
+    Route::post('store','store')->name('bahan.store');
+    Route::get('edit/{id}','edit')->name('bahan.edit');
+    Route::put('update/{id}','update')->name('bahan.update');
+    Route::delete('destroy/{id}','destroy')->name('bahan.destroy');
+});
 Route::controller(ListProdukUserController::class)->prefix('produk')->group(function () {
     Route::get('/', 'index')->name('produk');
 });

@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="content">
-        <form class="mb-9" action="{{ route('batik.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{ route('batik.store') }}" method="POST">
             @csrf
             <div class="row g-3 flex-between-end mb-5">
                 <div class="col-auto">
@@ -10,58 +10,48 @@
                     <h5 class="text-700 fw-semi-bold">Wajib diisi semua sebelum menambahkan produk baru</h5>
                 </div>
                 <div class="col-auto">
-                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('batik.index') }}">Cancel</a>
+                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('batik.store') }}">Cancel</a>
                     <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Add</button>
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-12 col-xl-8">
                     <div class="mb-3">
-                        <label for="namabatik"><h4 class="mb-3">Nama Produk</h4></label>
-                        <input class="form-control @error('nama_batik') is-invalid @enderror" id="namabatik" type="text" placeholder="Enter Product Name" name="nama_batik" value="{{ old('nama_batik') }}"/>
-                        @error('nama_batik')
+                        <label for="bahan_id"><h4 class="mb-3">bahan batik</h4></label>
+                        <select class="form-control" id="bahan_id" name="bahan_id">
+                            <option value="" selected disabled>Pilih Kain</option>
+                            @foreach ($bahan as $b)
+                                <option value="{{ $b->id }}">{{ $b->bahan }}</option>
+                            @endforeach
+                        </select>
+                        @error('bahan_id')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
                     <div class="mb-6">
-                        <label for="deskripsibatik"><h4 class="mb-3">Deskripsi</h4></label>
-                        <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsibatik" name="deskripsi" rows="5" placeholder="Enter Product Description">{{ old('deskripsi') }}</textarea>
+                        <label for="nama_produk"><h4 class="mb-3">nama_produk</h4></label>
+                        <textarea class="form-control @error('nama_produk') is-invalid @enderror" id="nama_produk" name="nama_produk" placeholder="masukkan nama produk">{{ old('nama_produk') }}</textarea>
+                        @error('nama_produk')
+                            <strong class="invalid-feedback">{{ $message }}</strong>
+                        @enderror
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="deskripsi"><h4 class="mb-3">deskripsi</h4></label>
+                        <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" rows="5" placeholder="">{{ old('deskripsi') }}</textarea>
                         @error('deskripsi')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
-                    <div class="mb-5">
-                        <label for="fotobatik"><h4 class="mb-3">Foto Produk</h4></label>
-                        <input class="form-control @error('foto_batik') is-invalid @enderror" id="fotobatik" type="file" name="foto_batik">
-                        <img class="mt-2" id="image-preview" src="#" alt="Preview" style="display: none; width: 100%; height: auto; border-radius: 5px">
-                        <strong class="invalid-feedback" id="image-error" style="display: none;">This input must be an image</strong>
-                        @error('foto_batik')
-                            <strong class="invalid-feedback">{{ $message }}</strong>
-                        @enderror
-                        <script>
-                            document.getElementById('fotobatik').addEventListener('change', function(e) {
-                                const file = e.target.files[0];
-                                const reader = new FileReader();
-                                const imagePreview = document.getElementById('image-preview');
-                                const imageError = document.getElementById('image-error');
-                                const inputField = document.getElementById('fotobatik');
-
-                                if (file && file.type.startsWith('image/')) {
-                                    reader.onload = function(e) {
-                                        imagePreview.src = e.target.result;
-                                        imagePreview.style.display = 'block';
-                                        imageError.style.display = 'none';
-                                        inputField.classList.remove('is-invalid');
-                                    }
-                                    reader.readAsDataURL(file);
-                                } else {
-                                    imagePreview.style.display = 'none';
-                                    imageError.style.display = 'block';
-                                    inputField.classList.add('is-invalid');
-                                }
-                            });
-                        </script>
+                    <h4 class="mb-3">Gambar Produk</h4>
+                    <div class="dropzone dropzone-multiple p-0 mb-5" id="my-awesome-dropzone" data-dropzone="data-dropzone">
+                      <div class="fallback"><input name="gambar_produk" type="file" multiple="multiple" /></div>
+                      <div class="dz-preview d-flex flex-wrap">
+                        <div class="border bg-white rounded-3 d-flex flex-center position-relative me-2 mb-2" style="height:80px;width:80px;"><img class="dz-image" src="../../../assets/img/products/23.png" alt="..." data-dz-thumbnail="data-dz-thumbnail" /><a class="dz-remove text-400" href="#!" data-dz-remove="data-dz-remove"><span data-feather="x"></span></a></div>
+                      </div>
+                      <div class="dz-message text-600" data-dz-message="data-dz-message">Drag your photo here<span class="text-800 px-1">or</span><button class="btn btn-link p-0" type="button">Browse from device</button><br /><img class="mt-3 me-2" src="../../../assets/img/icons/image-icon.png" width="40" alt="" /></div>
                     </div>
+
                 </div>
                 <div class="col-12 col-xl-4">
                     <div class="row g-2">
@@ -73,33 +63,32 @@
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
-                                                    <label for="kategoribatik" class="mb-0 text-1000 me-2"><h5>bahan batik</h5></label>
-                                                </div>
-                                                <select class="form-select mb-3 @error('kategori') is-invalid @enderror" id="kategoribatik" name="kategori_id">
-                                                    {{-- @if($kategori->isEmpty())
-                                                        <option value="">No category data available</option>
-                                                    @else
-                                                        @foreach($kategori as $kategoris)
-                                                            <option value="{{ $kategoris->id }}" {{ old('kategori_id') == $kategoris->id ? 'selected' : '' }}>{{ $kategoris->nama_kategori }}</option>
-                                                        @endforeach
-                                                    @endif --}}
-                                                </select>
-                                                @error('kategori_id')
+                                                    <label for="seri_produk" class="mb-0 text-1000 me-2"><h5>seri produk</h5></label>
+                                                    <input class="form-control @error('seri_produk') is-invalid @enderror" id="seri_produk" type="text" placeholder="Masukkan Seri" name="seri_produk" value="{{ old('seri_produk') }}" />
+                                                @error('seri_produk')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
+                                                </div>
+                                                <div class="d-flex flex-wrap mb-2">
+                                                    <label for="harga" class="mb-0 text-1000 me-2"><h5>harga</h5></label>
+                                                    <input class="form-control @error('harga') is-invalid @enderror" id="harga" type="text" placeholder="Masukkan harga butik" name="harga" value="{{ old('harga') }}" />
+                                                @error('seri_produk')
+                                                    <strong class="invalid-feedback">{{ $message }}</strong>
+                                                @enderror
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
-                                                <label for="beratbatik" class="mb-2 text-1000"><h5>stok</h5></label>
-                                                <input class="form-control @error('berat') is-invalid @enderror" id="beratbatik" type="number" placeholder="Masukkan     Stok" name="berat" value="{{ old('berat') }}" />
-                                                @error('berat')
+                                                <label for="stok" class="mb-2 text-1000"><h5>stok</h5></label>
+                                                <input class="form-control @error('stok') is-invalid @enderror" id="stok" type="number" placeholder="Masukkan Stok" name="stok" value="{{ old('stok') }}" />
+                                                @error('stok')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 col-xl-12">
-                                            
+
                                         </div>
                                     </div>
                                 </div>

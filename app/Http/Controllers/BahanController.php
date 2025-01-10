@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bahan;
-use App\Models\Batik;
 use Illuminate\Http\Request;
 
-class BatikController extends Controller
+class BahanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $batik = Batik::all();
-        return view('admin.batik.index', compact('batik'));
+        $bahan = Bahan::all();
+        return view ('admin.bahan.index', compact('bahan'));
+
     }
 
     /**
@@ -22,9 +22,7 @@ class BatikController extends Controller
      */
     public function create()
     {
-        
-        $bahan = Bahan::get();
-        return view('admin.batik.create', compact('bahan'));
+        return view ('admin.bahan.create');
     }
 
     /**
@@ -32,8 +30,8 @@ class BatikController extends Controller
      */
     public function store(Request $request)
     {
-        Batik::create ($request->all());
-        return redirect()->route('batik.index');
+        Bahan::create($request->all());
+        return redirect()->route('bahan.index');
     }
 
     /**
@@ -49,9 +47,8 @@ class BatikController extends Controller
      */
     public function edit(string $id)
     {
-        $batik = Batik::findOrFail($id);
-        $bahan = Bahan::get();
-        return view('admin.batik.edit', compact('batik','bahan'));
+        $bahan = Bahan::findOrFail($id);
+        return view('admin.bahan.edit', compact('bahan'));
     }
 
     /**
@@ -59,9 +56,9 @@ class BatikController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $batik= Batik::find($id);
-        $batik->update($request->except('_token','submit'));
-        return redirect()->route('batik.index');
+        $bahan= Bahan::find($id);
+        $bahan->update($request->except('_token','submit'));
+        return redirect()->route('bahan.index');
     }
 
     /**
@@ -69,8 +66,8 @@ class BatikController extends Controller
      */
     public function destroy(string $id)
     {
-        $batik = Batik::find($id);
-        $batik->delete();
-        return redirect()->route('batik.index');
+        $bahan = Bahan::find($id);
+        $bahan->delete();
+        return redirect()->route('bahan.index');
     }
 }

@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Batik extends Model
 {
     use HasFactory;
-    protected $table  = 'tb_batik';
-    protected $guarded = [];
+    protected $table = 'batiks';
+    protected $fillable = [
+        'bahan_id',
+        'gambar_produk',
+        'nama_produk',
+        'harga',
+        'stok',
+        'seri_produk',
+        'deskripsi'
+    ];
+    public function batik(){
+        return $this->hasMany(Batik::class);
+    }
 }

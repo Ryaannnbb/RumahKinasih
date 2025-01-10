@@ -28,11 +28,15 @@
               <div class="parent-wrapper label-1">
                 <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-home">
                   <li class="collapsed-nav-item-title d-none">Home</li>
-                  <li class="nav-item"><a class="nav-link" href="../../../index.html" data-bs-toggle="" aria-expanded="false">
+                  <li class="nav-item"><a class="nav-link" href="/home" data-bs-toggle="" aria-expanded="false">
+                    <div class="d-flex align-items-center"><span class="nav-link-text">Home</span></div>
+                  </a><!-- more inner pages-->
+                </li>
+                  <li class="nav-item"><a class="nav-link" href="/batik" data-bs-toggle="" aria-expanded="false">
                       <div class="d-flex align-items-center"><span class="nav-link-text">Batik</span></div>
                     </a><!-- more inner pages-->
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="../../../dashboard/project-management.html" data-bs-toggle="" aria-expanded="false">
+                  <li class="nav-item"><a class="nav-link" href="/bahan" data-bs-toggle="" aria-expanded="false">
                       <div class="d-flex align-items-center"><span class="nav-link-text">Bahan Batik</span></div>
                     </a><!-- more inner pages-->
                   </li>
