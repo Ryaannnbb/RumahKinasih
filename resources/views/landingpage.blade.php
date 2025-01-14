@@ -263,25 +263,25 @@
               </a>
             </div>
             <!-- Item 2 -->
-            <div class="col-6 col-md-4 px-2 isotope-item third">
+            <div class="col-6 col-md-4 px-2 isotope-item">
               <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/batik_ciprat2.jpg">
                 <img class="rounded img-fluid w-100" src="images/batik_ciprat2.jpg" alt="">
               </a>
             </div>
             <!-- Item 3 -->
-            <div class="col-6 col-md-4 px-2 isotope-item second">
+            <div class="col-6 col-md-4 px-2 isotope-item">
               <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/topi.jpg">
                 <img class="rounded img-fluid w-100" src="images/topi.jpg" alt="">
               </a>
             </div>
             <!-- Item 4 -->
-            <div class="col-6 col-md-4 px-2 isotope-item third">
+            <div class="col-6 col-md-4 px-2 isotope-item">
               <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/baju.jpg">
                 <img class="rounded img-fluid w-100" src="images/baju.jpg" alt="">
               </a>
             </div>
             <!-- Item 5 -->
-            <div class="col-6 col-md-4 px-2 isotope-item third second">
+            <div class="col-6 col-md-4 px-2 isotope-item">
               <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/kerudung.jpeg">
                 <img class="rounded img-fluid w-100" src="images/kerudung.jpeg" alt="">
               </a>
@@ -289,7 +289,6 @@
           </div>
         </div>
       </section>
-      
 
       <section class="bg-white" id="blog">
         <div class="container-small px-lg-7 px-xxl-3">

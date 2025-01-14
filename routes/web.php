@@ -24,7 +24,7 @@ use App\Http\Controllers\ListProdukUserController;
 Route::get('/', function () {
     return view('landingpage');
 });
-Route::get('/listproduk', function () {
+Route::get('/beranda', function () {
     return view('homepage');
 });
 Route::get('/home', function () {
@@ -72,7 +72,7 @@ Route::controller(HomepageController::class)->prefix('homepage')->group(function
     Route::get('/', 'index')->name('homepage');
 });
 
-Route::controller(DashboardControtller::class)->prefix('dashboard')->group(function () {
+Route::controller(DashboardController::class)->prefix('dashboard')->group(function () {
     Route::get('/', 'index')->name('dashboard');
 });
 
