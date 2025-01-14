@@ -9,6 +9,7 @@ use App\Http\Middleware\RedirectMiddleware;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\AdminListController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ListProdukUserController;
 
 /*
@@ -85,6 +86,15 @@ Route::middleware([RedirectMiddleware::class])->group(function () {
         Route::get('/logout', 'logout')->name('logout');
     });
 });
+
+// RESET PASSWORD
+Route::controller(ResetPasswordController::class)->group(function () {
+    Route::get('forgot-password', 'request')->name('password.request');
+    Route::post('forgot-password', 'sendEmail')->name('password.email');
+    Route::get('reset-password/{token}', 'resetPassword')->name('password.reset');
+    Route::post('reset-password', 'updatePassword')->name('password.update');
+});
+
 
 // USER
 Route::controller(HomepageController::class)->prefix('homepage')->group(function () {

@@ -84,6 +84,9 @@
               <li class="nav-item border-bottom border-bottom-lg-0">
                 <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="#blog">Blog</a>
               </li>
+              <li class="nav-item border-bottom border-bottom-lg-0">
+                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="{{ route('login') }}">Login</a>
+              </li>
             </ul>
             <div class="d-grid d-lg-flex align-items-center">
               <div class="nav-item d-flex align-items-center d-none d-lg-block pe-2">

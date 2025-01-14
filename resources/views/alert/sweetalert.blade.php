@@ -49,6 +49,21 @@
         </script>
     @endif
 
+    @if (session('reset'))
+        <script>
+            let timerInterval;
+            Swal.fire({
+                icon: "success",
+                title: "Success!",
+                html: "{{ session('reset') }}",
+                // timer: 2500,
+                // timerProgressBar: true,
+                showConfirmButton: true
+                // confirmButtonText: "Yes, accept!"
+            })
+        </script>
+    @endif
+
     @if (session('success_login'))
     <script>
         setTimeout(function() {

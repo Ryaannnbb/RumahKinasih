@@ -14,15 +14,15 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>@yield('title', 'Asasta Indonesia')</title>
+    <title>@yield('title', 'Rumah Kinasih')</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/storyset/WhatsApp_Image_2024-12-05_at_12.20.38-removebg-preview.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo_kinasih.png') }}">
     <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
