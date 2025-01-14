@@ -155,7 +155,7 @@
         <div class="col-12 col-sm-auto text-center">
           <p class="mb-0 text-600">v1.13.0</p>
         </div>
-      </div>
+      </div>class="dropdown-header text-1000 fs--2 py-2"
     </footer>
   </div>
 @endsection
