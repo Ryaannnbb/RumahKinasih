@@ -13,15 +13,15 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Phoenix</title>
+    <title>Login</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo_kinasih.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo_kinasih.png') }}">
     <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
@@ -83,7 +83,7 @@
                                         class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
                                         <h5 class="mb-3 text-black fs-1">Rumah Kinasih</h5>
                                         <ul class="list-unstyled mb-0 w-max-content w-md-auto mx-auto">
-                                            <li class="d-flex align-items-center"><span
+                                            {{-- <li class="d-flex align-items-center"><span
                                                     class="uil uil-check-circle text-success me-2"></span><span
                                                     class="text-700 fw-semi-bold">Fast</span></li>
                                             <li class="d-flex align-items-center"><span
@@ -91,10 +91,9 @@
                                                     class="text-700 fw-semi-bold">Simple</span></li>
                                             <li class="d-flex align-items-center"><span
                                                     class="uil uil-check-circle text-success me-2"></span><span
-                                                    class="text-700 fw-semi-bold">Responsive</span></li>
+                                                    class="text-700 fw-semi-bold">Responsive</span></li> --}}
                                         </ul>
                                     </div>
-
                                     <div
                                         class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15">
                                         <img class="auth-title-box-img d-dark-none"
@@ -102,16 +101,13 @@
                                             alt="" /><img class="auth-title-box-img d-light-none"
                                             src="../../../assets/img/icons/ibubatik.jpeg" alt="" />
                                     </div>
-
                                 </div>
                                 <div class="col mx-auto">
                                     <div class="auth-form-box">
                                         <div class="text-center mb-7">
                                             <a class="d-flex flex-center text-decoration-none mb-4"
                                                 href="../../../index.html">
-                                                <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="../../../assets/img/icons/logo_kinasih.png" alt="logo_kinasih" width="58" /></div>
-
-
+                                                <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="{{ asset('images/logo_kinasih.png') }}" alt="logo_kinasih" width="58" /></div>
                                             </a>
                                             <h3 class="text-1000">Sign In</h3>
                                             <p class="text-700">Get access to your account</p>
@@ -155,9 +151,9 @@
                                                             for="basic-checkbox">Remember me</label>
                                                     </div>
                                                 </div>
-                                                {{-- <div class="col-auto">
+                                                <div class="col-auto">
                                                     <a class="fs--1 fw-semi-bold" href="{{ route('password.request') }}">Forgot Password?</a>
-                                                </div> --}}
+                                                </div>
                                             </div>
                                             <button class="btn btn-primary w-100 mb-3" type="submit">Sign In</button>
                                         </form>
