@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batik;
 use Illuminate\Http\Request;
 
 class HomepageController extends Controller
@@ -11,7 +12,8 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        return view('user.homepage');
+        $produk = Batik::all();
+        return view('user.homepage', compact('produk'));
     }
 
     /**
@@ -35,7 +37,9 @@ class HomepageController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $produk = Batik::findOrFail($id);
+        $similar = Batik::where('bahan_id', $produk->bahan_id)->where('id', '!=', $produk->id)->get();
+        return view('user.produkdetail', compact('produk', 'similar'));
     }
 
     /**

@@ -7,7 +7,7 @@
     <div class="mb-9">
         <div class="row g-3 mb-4">
             <div class="col-auto">
-                <h2 class="mb-0">Admin List</h2>
+                <h2 class="mb-0">Admin List and Approval</h2>
             </div>
         </div>
         <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
@@ -49,7 +49,7 @@
                             <tr>
                                 <td colspan="8" class="text-center py-4">
                                     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
-                                        <img src="{{ asset('img/storyset/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
+                                        <img src="{{ asset('images/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
                                         <h3 class="mt-3 mb-0">No data available</h3>
                                     </div>
                                 </td>

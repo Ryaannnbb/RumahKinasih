@@ -1,6 +1,8 @@
 @extends('admin.layout.app')
 
 @section('main')
+
+@include('alert.sweetalert')
   <div class="content">
     <div class="mb-9">
       <div class="row g-3 mb-4">
@@ -33,7 +35,7 @@
                     <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">PRODUCT NAME</th>
                     <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">PRICE</th>
                     <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">STOCK</th>
-                    <th class="sort align-middle ps-4" scope="col" style="width:150px;">NAMA BAHAN</th>
+                    <th class="sort align-middle white-space-nowrap ps-4" scope="col" style="width:150px;">NAMA BAHAN</th>
                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">SERI PRODUK</th>
                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESCRIPTION</th>
                     <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">CREATED AT</th>
@@ -45,7 +47,7 @@
                 <tr>
                     <td colspan="8" class="text-center py-4">
                         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
-                            <img src="{{ asset('img/storyset/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
+                            <img src="{{ asset('images/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
                             <h3 class="mt-3 mb-0">No data available</h3>
                         </div>
                     </td>
@@ -128,26 +130,22 @@
               </tbody>
             </table>
           </div>
-          <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
-            <div class="col-auto d-flex">
-              <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p><a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+        @if (!$batik->isEmpty())
+            <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
+                <div class="col-auto d-flex">
+                    <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p>
+                    <a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                </div>
+                <div class="col-auto d-flex">
+                    <button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
+                    <ul class="mb-0 pagination"></ul>
+                    <button class="page-link pe-0" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
+                </div>
             </div>
-            <div class="col-auto d-flex"><button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
-              <ul class="mb-0 pagination"></ul><button class="page-link pe-0" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
-            </div>
-          </div>
+        @endif
         </div>
       </div>
     </div>
-    <footer class="footer position-absolute">
-      <div class="row g-0 justify-content-between align-items-center h-100">
-        <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for creating with Phoenix<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;<a class="mx-1" href="https://themewagon.com/">Themewagon</a></p>
-        </div>
-        <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 text-600">v1.13.0</p>
-        </div>
-      </div>
-    </footer>
   </div>
 @endsection

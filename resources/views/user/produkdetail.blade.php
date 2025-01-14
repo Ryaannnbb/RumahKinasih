@@ -2,7 +2,7 @@
 <html lang="en-US" dir="ltr">
 
 
-<!-- Mirrored from prium.github.io/phoenix/v1.13.0/apps/e-commerce/landing/products-filter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Nov 2023 12:14:07 GMT -->
+<!-- Mirrored from prium.github.io/phoenix/v1.13.0/apps/e-commerce/landing/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Nov 2023 12:13:56 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Kinasih</title>
+    <title>Phoenix</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -31,6 +31,9 @@
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
+    <link href="../../../vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../../../vendors/dropzone/dropzone.min.css" rel="stylesheet">
+    <link href="../../../vendors/glightbox/glightbox.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
@@ -230,6 +233,13 @@
                     </li>
                   </ul>
                 </div>
+                <div class="col-12 col-md-6">
+                  <div class="search-box ecommerce-search-box w-100">
+                    <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search form-control-sm" type="search" placeholder="Search" aria-label="Search" />
+                      <span class="fas fa-search search-box-icon"></span>
+                    </form>
+                  </div>
+                </div>
               </div>
             </nav>
           </div>
@@ -237,126 +247,115 @@
       </section><!-- <section> close ============================-->
       <!-- ============================================-->
 
-      {{-- <nav class="ecommerce-navbar navbar-expand navbar-light bg-white justify-content-between">
-        <div class="container-small d-flex flex-between-center" data-navbar="data-navbar">
-          <div class="dropdown"><button class="btn text-900 ps-0 pe-5 text-nowrap dropdown-toggle dropdown-caret-none" data-category-btn="data-category-btn" data-bs-toggle="dropdown"><span class="fas fa-bars me-2"></span>Category</button>
-            <div class="dropdown-menu border py-0 category-dropdown-menu">
-              <div class="card border-0 scrollbar" style="max-height: 657px;">
-                <div class="card-body p-6 pb-3">
-                  <div class="row gx-7 gy-5 mb-5">
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="pocket" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Collectibles &amp; Art</h6>
+      <div class="pt-5 pb-9">
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0">
+          <div class="container-small">
+            <div class="row g-5 mb-5 mb-lg-8" data-product-details="data-product-details">
+              <div class="col-12 col-lg-6">
+                <div class="row g-3 mb-3">
+                  <div class="col-12 col-md-10 col-lg-12 col-xl-10">
+                    <div class="d-flex align-items-center border rounded-3 text-center p-5 h-100">
+                      <div class="swiper swiper-container theme-slider" data-thumb-target="swiper-products-thumb" data-products-swiper='{"slidesPerView":1,"spaceBetween":16,"thumbsEl":".swiper-products-thumb"}'>
+                        <div class="swipper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="w-100" src="{{ asset('storage/batik/' . $produk->gambar_produk) }}" alt="">
+                            </div>
+                        </div>
                       </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Collectibles</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Antiques</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Sports memorabilia </a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Art</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="home" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Home &amp; Gardan</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Yard, Garden &amp; Outdoor</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Crafts</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Home Improvement</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Pet Supplies</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="globe" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Sporting Goods</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Outdoor Sports</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Team Sports</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Exercise &amp; Fitness</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Golf</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="monitor" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Electronics</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Computers &amp; Tablets</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Camera &amp; Photo</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">TV, Audio &amp; Surveillance</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Cell Ohone &amp; Accessories</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="truck" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Auto Parts &amp; Accessories</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">GPS &amp; Security Devices</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Rader &amp; Laser Detectors</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Care &amp; Detailing</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Scooter Parts &amp; Accessories</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="codesandbox" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Toys &amp; Hobbies</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Radio Control</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Kids Toys</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Action Figures</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Dolls &amp; Bears</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="watch" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Fashion</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Women</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Men</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Jewelry &amp; Watches</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Shoes</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="music" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Musical Instruments &amp; Gear</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Guitar</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Pro Audio Equipment</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">String</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Stage Lighting &amp; Effects</a></div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                      <div class="d-flex align-items-center mb-3"><span class="text-primary me-2" data-feather="grid" style="stroke-width:3;"></span>
-                        <h6 class="text-1000 mb-0 text-nowrap">Other Categories</h6>
-                      </div>
-                      <div class="ms-n2"><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Video Games &amp; Consoles</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Health &amp; Beauty</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Baby</a><a class="text-black d-block mb-1 text-decoration-none hover-bg-100 px-2 py-1 rounded-2" href="#!">Business &amp; Industrial</a></div>
                     </div>
                   </div>
-                  <div class="text-center border-top pt-3"><a class="fw-bold" href="#!">See all Categories<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a></div>
+                </div>
+                <div class="col-12 col-lg-10">
+                    <a href="https://api.whatsapp.com/send?phone=6282142776116&text=Halo%20saya%20tertarik%20dengan%20produk%20batik%20Anda." class="btn btn-lg btn-primary rounded-pill w-100 fs--1 fs-sm-0">
+                        <span class="fas fa-shopping-cart me-2"></span>Add to cart
+                    </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <h3 class="mb-3 lh-sm">{{ $produk->nama_produk }}</h3>
+                    <div class="d-flex flex-wrap align-items-center">
+                    <h1 class="me-3">{{ number_format($produk->harga, 0, ',', '.') }} Rp</h1>
+                      {{-- <p class="text-500 text-decoration-line-through fs-2 mb-0 me-3">$1499.99</p>
+                      <p class="text-warning-500 fw-bolder fs-2 mb-0">10% off</p> --}}
+                    </div>
+                    <p class="text-success fw-semi-bold fs-1 mb-2">In stock</p>
+                    <p class="mb-2 text-800"><strong class="text-1000">Ingin produk ini dikirim pada Sabtu, 29 Juli?</strong> Pilih <strong class="text-1000">Pengiriman Sabtu </strong>saat checkout jika Anda ingin pesanan Anda dikirim dalam waktu 12 jam 43 menit, <a class="fw-bold" href="#!">Detail. </a><strong class="text-1000">Pembungkusan kado tersedia.</strong></p>
+                    <p class="text-danger-500 fw-bold mb-5 mb-lg-0">Penawaran spesial berakhir dalam 23:00:45 jam</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <ul class="navbar-nav justify-content-end align-items-center">
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link ps-0" href="homepage.html">Home</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link" href="favourite-stores.html">My Favorites Stores</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link active" href="products-filter.html">Products</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link" href="wishlist.html">Wishlist</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link" href="shipping-info.html">Shipping Info</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link" href="../admin/add-product.html">Be a vendor</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link" href="order-tracking.html">Track order</a></li>
-            <li class="nav-item" data-nav-item="data-nav-item"><a class="nav-link pe-0" href="checkout.html">Checkout</a></li>
-            <li class="nav-item dropdown" data-nav-item="data-nav-item" data-more-item="data-more-item"><a class="nav-link dropdown-toggle dropdown-caret-none fw-bold pe-0" href="javascript: void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-boundary="window" data-bs-reference="parent"> More<span class="fas fa-angle-down ms-2"></span></a>
-              <div class="dropdown-menu dropdown-menu-end category-list" aria-labelledby="navbarDropdown" data-category-list="data-category-list"></div>
-            </li>
-          </ul>
-        </div>
-      </nav> --}}
+          </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0">
+          <div class="container-small">
+            <ul class="nav nav-underline mb-4" id="productTab" role="tablist">
+              <li class="nav-item"><a class="nav-link active" id="description-tab" data-bs-toggle="tab" href="#tab-description" role="tab" aria-controls="tab-description" aria-selected="true">Description</a></li>
+            </ul>
+            <div class="row gx-3 gy-7">
+              <div class="col-12 col-lg-7 col-xl-8">
+                <div class="tab-content" id="productTabContent">
+                  <div class="tab-pane pe-lg-6 pe-xl-12 fade show active text-1100" id="tab-description" role="tabpanel" aria-labelledby="description-tab">
+                    <p class="mb-5">{{ $produk->deskripsi }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+        <!-- ============================================-->
+      </div>
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-5 pb-9">
-        <div class="product-filter-container"><button class="btn btn-sm btn-phoenix-secondary text-700 mb-5 d-lg-none" data-phoenix-toggle="offcanvas" data-phoenix-target="#productFilterColumn"> <span class="fa-solid fa-filter me-2"></span>Filter</button>
-          <div class="row">
-            <div class="col-lg-12 col-xxl-10">
-              <div class="row gx-3 gy-6 mb-8">
-                @foreach ($produk as $item)
-                <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
-                    <div class="product-card-container h-100">
-                        <div class="position-relative text-decoration-none product-card h-100">
-                            <div class="d-flex flex-column justify-content-between h-100">
-                                <div>
-                                    <div class="border border-1 rounded-3 position-relative mb-3">
-                                        {{-- <button class="btn rounded-circle p-0 d-flex flex-center btn-wish z-index-2 d-toggle-container btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to wishlist">
-                                            <span class="fas fa-heart d-block-hover"></span>
-                                            <span class="far fa-heart d-none-hover"></span>
-                                        </button> --}}
-                                        @if (filter_var($item->gambar_produk, FILTER_VALIDATE_URL))
-                                            <img src="{{ $item->gambar_produk }}" alt="" class="img-fluid" />
-                                        @else
-                                            <img src="{{ asset('storage/batik/' . $item->gambar_produk) }}" alt="" class="img-fluid" />
-                                        @endif
-                                    </div>
-                                    <a class="stretched-link" href="{{ route('homepage.show', $item->id) }}">
-                                        <h6 class="mb-2 lh-sm line-clamp-3 product-name">{{ $item->nama_produk }}</h6>
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3 class="text-1100 mb-0">Rp {{ number_format($item->harga, 0, ',', '.') }}</h3>
-                                </div>
-                            </div>
+      <section class="py-0 mb-9">
+        <div class="container">
+          <div class="d-flex flex-between-center mb-3">
+            <div>
+              <h3>Similar Products</h3>
+              <p class="mb-0 text-700 fw-semi-bold">Essential for a better life</p>
+            </div><a href="{{ route('homepage') }}" class="btn btn-sm btn-phoenix-primary">View all</a>
+          </div>
+          <div class="swiper-theme-container products-slider">
+            <div class="swiper swiper-container theme-slider" data-swiper='{"slidesPerView":1,"spaceBetween":16,"breakpoints":{"450":{"slidesPerView":2,"spaceBetween":16},"768":{"slidesPerView":3,"spaceBetween":16},"992":{"slidesPerView":4,"spaceBetween":16},"1200":{"slidesPerView":5,"spaceBetween":16},"1540":{"slidesPerView":6,"spaceBetween":16}}}'>
+              <div class="swiper-wrapper">
+                @foreach ($similar as $item)
+                <div class="swiper-slide">
+                  <div class="position-relative text-decoration-none product-card h-100">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                      <div>
+                        <div class="border border-1 rounded-3 position-relative mb-3">
+                            <img class="img-fluid" src="{{ asset('storage/batik/' . $item->gambar_produk) }}" alt="" />
                         </div>
+                        <a class="stretched-link" href="{{ route('homepage.show', $item->id) }}">
+                          <h6 class="mb-2 lh-sm line-clamp-3 product-name">{{ $item->nama_produk }}</h6>
+                        </a>
+                      </div>
+                      <div>
+                        <div class="d-flex align-items-center mb-1">
+                          <h3 class="text-1100 mb-0">Rp {{ number_format($item->harga, 0, ',', '.') }}</h3>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
                 @endforeach
               </div>
+            </div>
+            <div class="swiper-nav">
+              <div class="swiper-button-next"><span class="fas fa-chevron-right nav-icon"></span></div>
+              <div class="swiper-button-prev"><span class="fas fa-chevron-left nav-icon"></span></div>
             </div>
           </div>
         </div><!-- end of .container-->
@@ -394,17 +393,6 @@
         </div><!-- end of .container-->
       </section><!-- <section> close ============================-->
       <!-- ============================================-->
-
-      {{-- <footer class="footer position-relative">
-        <div class="row g-0 justify-content-between align-items-center h-100">
-          <div class="col-12 col-sm-auto text-center">
-            <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for creating with Phoenix<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;<a class="mx-1" href="https://themewagon.com/">Themewagon</a></p>
-          </div>
-          <div class="col-12 col-sm-auto text-center">
-            <p class="mb-0 text-600">v1.13.0</p>
-          </div>
-        </div>
-      </footer> --}}
     </main><!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
@@ -422,9 +410,13 @@
     <script src="../../../vendors/list.js/list.min.js"></script>
     <script src="../../../vendors/feather-icons/feather.min.js"></script>
     <script src="../../../vendors/dayjs/dayjs.min.js"></script>
+    <script src="../../../vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../../../vendors/dropzone/dropzone.min.js"></script>
+    <script src="../../../vendors/rater-js/index.js"></script>
+    <script src="../../../vendors/glightbox/glightbox.min.js"> </script>
     <script src="../../../assets/js/phoenix.js"></script>
   </body>
 
 
-<!-- Mirrored from prium.github.io/phoenix/v1.13.0/apps/e-commerce/landing/products-filter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Nov 2023 12:14:07 GMT -->
+<!-- Mirrored from prium.github.io/phoenix/v1.13.0/apps/e-commerce/landing/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Nov 2023 12:14:07 GMT -->
 </html>

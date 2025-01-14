@@ -17,14 +17,14 @@
         <div class="row g-5">
             <div class="col-12 col-xl-12">
                 <div class="mb-3">
-                    <label for="nama_bahan"><h4 class="mb-3">nama_bahan</h4></label>
+                    <label for="nama_bahan"><h4 class="mb-3">Nama Bahan</h4></label>
                     <input class="form-control @error('nama_bahan') is-invalid @enderror" id="namabatik" type="text" placeholder="masukkan nama bahan" name="nama_bahan" value="{{ old('nama_bahan') }}"/>
                     @error('nama_bahan')
                         <strong class="invalid-feedback">{{ $message }}</strong>
                     @enderror
                 </div>
                 <div class="mb-6">
-                    <label for="harga"><h4 class="mb-3">harga</h4></label>
+                    <label for="harga"><h4 class="mb-3">Harga</h4></label>
                     <input class="form-control @error('harga') is-invalid @enderror" id="harga" type="number" name="harga" placeholder="masukkan harga bahan" value="{{ old('harga') }}"/>
                     @error('harga')
                         <strong class="invalid-feedback">{{ $message }}</strong>

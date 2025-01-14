@@ -49,6 +49,7 @@
   </head>
 
   <body>
+    @include('alert.sweetalert')
     <main style="--phoenix-scroll-margin-top: 1.2rem;">
       <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
         <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3">
@@ -83,6 +84,9 @@
               <li class="nav-item border-bottom border-bottom-lg-0">
                 <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="https://www.rumahkinasih.org/berita">Blog</a>
               </li>
+              <li class="nav-item border-bottom border-bottom-lg-0">
+                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="{{ route('login') }}">Login</a>
+              </li>
             </ul>
             <div class="d-grid d-lg-flex align-items-center">
               <div class="nav-item d-flex align-items-center d-none d-lg-block pe-2">
@@ -100,7 +104,7 @@
           </div>
         </nav>
       </div>
-      
+
       <section class="bg-white pb-0 pt-0" id="home">
         <div class="container-small hero-header-container px-lg-7 px-xxl-3">
           <div class="row align-items-center">
@@ -132,7 +136,7 @@
                 Yayasan memproduksi Batik Ciprat dan wadah rehabilitasi bagi<br>
                 teman-teman disabilitas
               </p>
-              <a class="btn btn-link fs-0 p-0" href="{{ url('/listproduk') }}" role="button">
+              <a class="btn btn-link fs-0 p-0" href="{{ route('homepage') }}" role="button">
                 Produk Kami
                 <span class="fa-solid fa-angle-right ms-2 fs--1"></span>
               </a>

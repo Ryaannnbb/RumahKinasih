@@ -1,6 +1,8 @@
 @extends('admin.layout.app')
 
 @section('main')
+
+@include('alert.sweetalert')
   <div class="content">
     <div class="mb-9">
       <div class="row g-3 mb-4">
@@ -33,7 +35,8 @@
                     <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;">
                     </th>
                     <th class="text-center ps-4" scope="col" style="width:150px;">
-                        NAMA KATEGORI</th>
+                        MATERIAL NAME</th>
+                    <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">PRICE</th>
                     <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">CREATED AT</th>
                     <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                 </tr>
@@ -43,8 +46,8 @@
                 <tr>
                     <td colspan="8" class="text-center py-4">
                         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
-                            <img src="{{ asset('assets/img/storyset/No data-amico (1).svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
-                            <h3 class="mt-3 mb-0">Belum ada data bahan</h3>
+                            <img src="{{ asset('images/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
+                            <h3 class="mt-3 mb-0">No material data available</h3>
                         </div>
                     </td>
                 </tr>
@@ -62,8 +65,9 @@
                             href="../landing/product-details.html"><img src="../../../assets/img/products/1.png"
                                 alt="" width="53" /></a> --}}
                     </td>
-                    <td class="vendor text-center fw-bold ps-4">{{ $bahans->nama_bahan }}</td>
-                    <td class="time text-center white-space-nowrap text-600 ps-4">
+                    <td class="vendor align-middle white-space-nowrap fw-bold ps-4">{{ $bahans->nama_bahan }}</td>
+                    <td class="price align-middle white-space-nowrap fw-bold ps-4">Rp {{ number_format($bahans->harga, 0, ',', '.') }}</td>
+                    <td class="time align-middle white-space-nowrap text-600 ps-4">
                         {{ $bahans->created_at->format('d M Y') }}
                     </td>
                     <td class="align-middle white-space-nowrap text-end pe-0 ps-4 btn-reveal-trigger">
@@ -87,26 +91,22 @@
               </tbody>
             </table>
           </div>
-          <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
-            <div class="col-auto d-flex">
-              <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p><a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+        @if (!$bahan->isEmpty())
+            <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
+                <div class="col-auto d-flex">
+                    <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p>
+                    <a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                </div>
+                <div class="col-auto d-flex">
+                    <button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
+                    <ul class="mb-0 pagination"></ul>
+                    <button class="page-link pe-0" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
+                </div>
             </div>
-            <div class="col-auto d-flex"><button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
-              <ul class="mb-0 pagination"></ul><button class="page-link pe-0" data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
-            </div>
-          </div>
+        @endif
         </div>
       </div>
     </div>
-    <footer class="footer position-absolute">
-      <div class="row g-0 justify-content-between align-items-center h-100">
-        <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for creating with Phoenix<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;<a class="mx-1" href="https://themewagon.com/">Themewagon</a></p>
-        </div>
-        <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 text-600">v1.13.0</p>
-        </div>
-      </div>
-    </footer>
   </div>
 @endsection
