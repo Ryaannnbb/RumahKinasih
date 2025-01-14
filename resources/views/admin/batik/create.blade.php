@@ -74,7 +74,7 @@
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
                                                     <label for="bahanBatik" class="mb-0 text-1000 me-2"><h5>Category</h5></label>
-                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Add a New Bahan?</a>
+                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Add a New Material?</a>
                                                 </div>
                                                 <select class="form-select mb-3 @error('bahan_id') is-invalid @enderror" id="bahanBatik" name="bahan_id">
                                                     @if($bahan->isEmpty())

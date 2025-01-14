@@ -108,7 +108,7 @@
                                                     @else
                                                         @foreach ($bahan as $bahans)
                                                             <option value="{{ $bahans->id }}"
-                                                                {{ old('bahan_id', $bahan->bahan_id) == $bahans->id ? 'selected' : '' }}>
+                                                                {{ old('bahan_id', $batik->bahan_id) == $bahans->id ? 'selected' : '' }}>
                                                                 {{ $bahans->nama_bahan }}</option>
                                                         @endforeach
                                                     @endif

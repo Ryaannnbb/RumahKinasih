@@ -103,9 +103,61 @@ class BatikController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $batik= Batik::find($id);
-        $batik->update($request->except('_token','submit'));
-        return redirect()->route('batik.index');
+        $request->validate([
+            'bahan_id' => 'required|integer|exists:bahans,id',
+            'gambar_produk' => 'required|image|mimes:jpeg,png,jpg,svg|max:20048',
+            'nama_produk' => 'required|string|max:255',
+            'harga' => 'required|integer|min:0',
+            'stok' => 'required|integer|min:0',
+            'seri_produk' => 'required|string|max:255',
+            'deskripsi' => 'required',
+        ], [
+            'bahan_id.required' => 'Bahan is required.',
+            'bahan_id.integer' => 'Bahan must be a number.',
+            'bahan_id.exists' => 'Bahan is not valid.',
+            'gambar_produk.required' => 'Product image is required.',
+            'gambar_produk.image' => 'Product image must be an image.',
+            'gambar_produk.mimes' => 'Product image must be in jpeg, png, jpg, or svg format.',
+            'gambar_produk.max' => 'Product image must not exceed 20 MB.',
+            'nama_produk.required' => 'Product name is required.',
+            'nama_produk.string' => 'Product name must be a string.',
+            'nama_produk.max' => 'Product name must not exceed 255 characters.',
+            'harga.required' => 'Price is required.',
+            'harga.integer' => 'Price must be a number.',
+            'harga.min' => 'Price cannot be negative.',
+            'stok.required' => 'Stock is required.',
+            'stok.integer' => 'Stock must be a number.',
+            'stok.min' => 'Stock cannot be negative.',
+            'seri_produk.required' => 'Product series is required.',
+            'seri_produk.string' => 'Product series must be a string.',
+            'seri_produk.max' => 'Product series must not exceed 255 characters.',
+            'deskripsi.required' => 'Description is required.',
+        ]);
+
+        $batik = Batik::findOrFail($id);
+
+        if ($request->hasFile('gambar_produk')) {
+            if (file_exists(public_path('storage/batik/' . $batik->gambar_produk))) {
+            unlink(public_path('storage/batik/' . $batik->gambar_produk));
+            }
+
+            $file = $request->file('gambar_produk');
+            $fileName = Str::random(10) . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('storage/batik'), $fileName);
+            $batik->gambar_produk = $fileName;
+        }
+
+        $batik->update([
+            'bahan_id' => $request->bahan_id,
+            'gambar_produk' => $batik->gambar_produk,
+            'nama_produk' => $request->nama_produk,
+            'harga' => $request->harga,
+            'stok' => $request->stok,
+            'seri_produk' => $request->seri_produk,
+            'deskripsi' => $request->deskripsi,
+        ]);
+
+        return redirect()->route('batik.index')->with('success', 'Product Successfully Updated');
     }
 
     /**
@@ -114,7 +166,12 @@ class BatikController extends Controller
     public function destroy(string $id)
     {
         $batik = Batik::find($id);
+        if (file_exists(public_path('storage/batik/' . $batik->gambar_produk))) {
+            unlink(public_path('storage/batik/' . $batik->gambar_produk));
+        }
+
         $batik->delete();
-        return redirect()->route('batik.index');
+
+        return redirect()->route('batik.index')->with('success', 'Product Successfully Deleted');
     }
 }

@@ -49,6 +49,7 @@
   </head>
 
   <body>
+    @include('alert.sweetalert')
     <main style="--phoenix-scroll-margin-top: 1.2rem;">
       <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
         <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3">
@@ -100,7 +101,7 @@
           </div>
         </nav>
       </div>
-      
+
       <section class="bg-white pb-0 pt-0" id="home">
         <div class="container-small hero-header-container px-lg-7 px-xxl-3">
           <div class="row align-items-center">
@@ -132,7 +133,7 @@
                 Yayasan memproduksi Batik Ciprat dan wadah rehabilitasi bagi<br>
                 teman-teman disabilitas
               </p>
-              <a class="btn btn-link fs-0 p-0" href="#!" role="button">
+              <a class="btn btn-link fs-0 p-0" href="{{ route('homepage') }}" role="button">
                 Produk Kami
                 <span class="fa-solid fa-angle-right ms-2 fs--1"></span>
               </a>

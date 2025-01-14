@@ -1,6 +1,7 @@
 @extends('admin.layout.app')
 
 @section('main')
+@include('alert.sweetalert')
 <div class="modal fade" id="searchBoxModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="true" data-phoenix-modal="data-phoenix-modal" style="--phoenix-backdrop-opacity: 1;">
     <div class="modal-dialog">
       <div class="modal-content mt-15 rounded-pill">
