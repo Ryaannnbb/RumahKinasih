@@ -106,6 +106,7 @@
                 <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="{{ route('logout') }}"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
             </div>
           </div>
+            </div>
         </li>
       </ul>
     </div>

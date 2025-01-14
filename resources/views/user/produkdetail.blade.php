@@ -83,9 +83,7 @@
                     <li class="nav-item d-flex align-items-center">
                       <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
                     </li>
-                    <li class="nav-item"><a class="nav-link px-2 icon-indicator icon-indicator-primary" href="cart.html" role="button"><span class="text-700" data-feather="shopping-cart" style="height:20px;width:20px;"></span><span class="icon-indicator-number">3</span></a></li>
-                    <li class="nav-item dropdown"><a class="nav-link px-2 icon-indicator icon-indicator-sm icon-indicator-danger" id="navbarTopDropdownNotification" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false"><span class="text-700" data-feather="bell" style="height:20px;width:20px;"></span></a>
-                      <div class="dropdown-menu dropdown-menu-end notification-dropdown-menu py-0 shadow border border-300 navbar-dropdown-caret mt-2" id="navbarDropdownNotfication" aria-labelledby="navbarDropdownNotfication">
+                     <div class="dropdown-menu dropdown-menu-end notification-dropdown-menu py-0 shadow border border-300 navbar-dropdown-caret mt-2" id="navbarDropdownNotfication" aria-labelledby="navbarDropdownNotfication">
                         <div class="card position-relative border-0">
                           <div class="card-header p-2">
                             <div class="d-flex justify-content-between">
@@ -208,26 +206,15 @@
                               </div>
                               <h6 class="mt-2 text-black">Jerry Seinfield</h6>
                             </div>
-                            <div class="mb-3 mx-3"><input class="form-control form-control-sm" id="statusUpdateInput" type="text" placeholder="Update your status" /></div>
-                          </div>
                           <div class="overflow-auto scrollbar" style="height: 10rem;">
                             <ul class="nav d-flex flex-column mb-2 pb-1">
                               <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user"></span><span>Profile</span></a></li>
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="pie-chart"></span>Dashboard</a></li>
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="lock"></span>Posts &amp; Activity</a></li>
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="settings"></span>Settings &amp; Privacy </a></li>
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="help-circle"></span>Help Center</a></li>
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="globe"></span>Language</a></li>
                             </ul>
                           </div>
                           <div class="card-footer p-0 border-top">
-                            <ul class="nav d-flex flex-column my-3">
-                              <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
-                            </ul>
                             <hr />
                             <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
-                            <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
-                          </div>
+                           </div>
                         </div>
                       </div>
                     </li>
@@ -279,13 +266,11 @@
                   <div>
                     <h3 class="mb-3 lh-sm">{{ $produk->nama_produk }}</h3>
                     <div class="d-flex flex-wrap align-items-center">
-                    <h1 class="me-3">{{ number_format($produk->harga, 0, ',', '.') }} Rp</h1>
+                    <h1 class="me-3">Rp.{{ number_format($produk->harga, 0, ',', '.') }} </h1>
                       {{-- <p class="text-500 text-decoration-line-through fs-2 mb-0 me-3">$1499.99</p>
                       <p class="text-warning-500 fw-bolder fs-2 mb-0">10% off</p> --}}
                     </div>
                     <p class="text-success fw-semi-bold fs-1 mb-2">In stock</p>
-                    <p class="mb-2 text-800"><strong class="text-1000">Ingin produk ini dikirim pada Sabtu, 29 Juli?</strong> Pilih <strong class="text-1000">Pengiriman Sabtu </strong>saat checkout jika Anda ingin pesanan Anda dikirim dalam waktu 12 jam 43 menit, <a class="fw-bold" href="#!">Detail. </a><strong class="text-1000">Pembungkusan kado tersedia.</strong></p>
-                    <p class="text-danger-500 fw-bold mb-5 mb-lg-0">Penawaran spesial berakhir dalam 23:00:45 jam</p>
                   </div>
                 </div>
               </div>
