@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Phoenix</title>
+    <title>Rumah Kinasih</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -876,8 +876,8 @@
         <div class="container-small">
           <div class="row justify-content-between gy-4">
             <div class="col-12 col-lg-4">
-              <div class="d-flex align-items-center mb-3"><img src="../../../assets/img/icons/logo.png" alt="phoenix" width="27" />
-                <p class="logo-text ms-2">phoenix</p>
+              <div class="d-flex align-items-center mb-3"><img src="images/logo_kinasih.png" alt="phoenix" width="27" />
+                <p class="logo-text ms-2">Rumah Kinasih</p>
               </div>
               <p class="text-700 mb-1 fw-semi-bold lh-sm fs--1">Phoenix is an admin dashboard template with fascinating features and amazing layout. The template is responsive to all major browsers and is compatible with all available devices and screen sizes.</p>
             </div>

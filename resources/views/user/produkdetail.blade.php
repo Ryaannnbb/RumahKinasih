@@ -271,6 +271,7 @@
                       <p class="text-warning-500 fw-bolder fs-2 mb-0">10% off</p> --}}
                     </div>
                     <p class="text-success fw-semi-bold fs-1 mb-2">In stock</p>
+                    <p class="text-700">Harga yang ditawarkan sudah sangat bersaing, tapi kelebihan produk ini lebih dari sekadar angka. Lihat rincian lengkapnya untuk memahami kualitas dari bahan yang digunakan. Kami percaya, keputusan Anda akan lebih mudah dengan informasi yang transparan ini!</p>
                   </div>
                 </div>
               </div>
