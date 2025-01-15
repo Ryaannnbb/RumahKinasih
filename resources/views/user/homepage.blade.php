@@ -214,16 +214,10 @@
                                             <div class="d-flex flex-column justify-content-between h-100">
                                                 <div>
                                                     <div class="border border-1 rounded-3 position-relative mb-3">
-                                                        {{-- <button class="btn rounded-circle p-0 d-flex flex-center btn-wish z-index-2 d-toggle-container btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to wishlist">
-                                            <span class="fas fa-heart d-block-hover"></span>
-                                            <span class="far fa-heart d-none-hover"></span>
-                                        </button> --}}
                                                         @if (filter_var($item->gambar_produk, FILTER_VALIDATE_URL))
-                                                            <img src="{{ $item->gambar_produk }}" alt=""
-                                                                class="img-fluid" />
+                                                            <img src="{{ $item->gambar_produk }}" alt="" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;" />
                                                         @else
-                                                            <img src="{{ asset('storage/batik/' . $item->gambar_produk) }}"
-                                                                alt="" class="img-fluid" />
+                                                            <img src="{{ asset('storage/batik/' . $item->gambar_produk) }}" alt="" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;" />
                                                         @endif
                                                     </div>
                                                     <a class="stretched-link"
@@ -308,7 +302,7 @@
                         </div>
                         <p class="text-700 mb-1 fw-semi-bold lh-sm fs--1">Leave no one behind.</p>
                     </div>
-                    
+
                     <div class="col-6 col-md-auto">
                         <h5 class="fw-bolder mb-3">Customer Service</h5>
                         <div class="d-flex flex-column"><a class="text-700 fw-semi-bold fs--1 mb-1"
