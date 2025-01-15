@@ -109,11 +109,13 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end py-2">
                                             {{-- <a class="dropdown-item" href="{{ route('adminList.edit', $item->id) }}">Edit</a> --}}
+                                            @if ($item->role == 'waiting')
                                             <form action="{{ route('adminlist.approve', $item->id) }}" method="POST">
-                                                @method('PATCH')
-                                                @csrf
-                                                <button type="submit" class="dropdown-item text-success">Approve</button>
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-success">Approve</button>
                                             </form>
+                                            @endif
                                             <div class="dropdown-divider"></div>
                                             <form action="{{ route('adminlist.destroy', $item->id) }}" method="POST">
                                                 @csrf
@@ -128,6 +130,7 @@
                         </tbody>
                     </table>
                 </div>
+
                 {{-- <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
                     <div class="col-auto d-flex">
                         <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900"
@@ -146,5 +149,12 @@
             </div>
         </div>
     </div>
+    <footer class="footer position-absolute">
+        <div class="row g-0 justify-content-between align-items-center h-100">
+          <div class="col-12 col-sm-auto text-center">
+            <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
+          </div>
+        </div>
+      </footer>
 </div>
 @endsection

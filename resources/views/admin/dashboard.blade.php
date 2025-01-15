@@ -12,7 +12,7 @@
           </div>
           <div class="row align-items-center g-4">
             <div class="col-12 col-md-auto">
-              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-success-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-success-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-star text-success " data-fa-transform="shrink-2 up-8 right-6"></span></span>
+              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-primary-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-primary-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-user text-primary " data-fa-transform="shrink-2 up-8 right-6"></span></span>
                 <div class="ms-3">
                   <h4 class="mb-0">{{ $batik->count() }} available batik</h4>
                   @if($batik->count() > 0)
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="col-12 col-md-auto">
-              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-warning-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-warning-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-pause text-warning " data-fa-transform="shrink-2 up-8 right-6"></span></span>
+              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-success-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-success-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-check text-success " data-fa-transform="shrink-2 up-8 right-6"></span></span>
                 <div class="ms-3">
                 <h4 class="mb-0">{{ $adminlist->count() }} available admins</h4>
                 @if($adminlist->count() > 0)
@@ -36,7 +36,7 @@
               </div>
             </div>
             <div class="col-12 col-md-auto">
-              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-danger-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-danger-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-xmark text-danger " data-fa-transform="shrink-2 up-8 right-6"></span></span>
+              <div class="d-flex align-items-center"><span class="fa-stack" style="min-height: 46px;min-width: 46px;"><span class="fa-solid fa-square fa-stack-2x text-warning-300" data-fa-transform="down-4 rotate--10 left-4"></span><span class="fa-solid fa-circle fa-stack-2x stack-circle text-warning-100" data-fa-transform="up-4 right-3 grow-2"></span><span class="fa-stack-1x fa-solid fa-pause text-warning " data-fa-transform="shrink-2 up-8 right-6"></span></span>
                 <div class="ms-3">
                   <h4 class="mb-0">{{ $approval->count() }}</h4>
                 @if($approval->count() > 0)
@@ -56,7 +56,7 @@
       <div data-list='{"valueNames":["product","customer","rating","review","time"],"page":6}'>
         <div class="row align-items-end justify-content-between pb-5 g-3">
           <div class="col-auto">
-            <h3>Latest reviews</h3>
+            <h3>List Login</h3>
             <p class="text-700 lh-sm mb-0">Payment received across all channels</p>
           </div>
           <div class="col-12 col-md-auto">
@@ -69,7 +69,7 @@
                 </div>
               </div>
               <div class="col-auto">
-                <button class="btn btn-sm btn-phoenix-secondary bg-white hover-bg-100 me-2" type="button">All products</button>
+                <a href="{{ route('adminlist') }}" class="btn btn-sm btn-phoenix-secondary bg-white hover-bg-100 me-2" type="button">Admin List</a>
               </div>
             </div>
           </div>
@@ -78,53 +78,45 @@
           <table class="table fs--1 mb-0 border-top border-200">
             <thead>
               <tr>
-                <th class="white-space-nowrap fs--1 ps-0 align-middle">
-                  <div class="form-check mb-0 fs-0"><input class="form-check-input" id="checkbox-bulk-reviews-select" type="checkbox" data-bulk-select='{"body":"table-latest-review-body"}' /></div>
-                </th>
-                <th class="sort white-space-nowrap align-middle" scope="col"></th>
-                <th class="sort white-space-nowrap align-middle" scope="col" style="min-width:360px;" data-sort="product">PRODUCT</th>
-                <th class="sort align-middle" scope="col" data-sort="customer" style="min-width:200px;">CUSTOMER</th>
-                <th class="sort align-middle" scope="col" data-sort="rating" style="min-width:110px;">RATING</th>
-                <th class="sort align-middle" scope="col" style="max-width:350px;" data-sort="review">REVIEW</th>
-                <th class="sort text-start ps-5 align-middle" scope="col" data-sort="status">STATUS</th>
-                <th class="sort text-end align-middle" scope="col" data-sort="time">TIME</th>
-                <th class="sort text-end pe-0 align-middle" scope="col"></th>
+                <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">NO</th>
+                <th class="white-space-nowrap align-middle" scope="col">EMAIL ADDRESS</th>
+                <th class="white-space-nowrap align-middle" scope="col" style="min-width:360px;" data-sort="product">NAME</th>
+                <th class="align-middle" scope="col" data-sort="rating" style="min-width:110px;">ROLE</th>
+                <th class="align-middle" scope="col" data-sort="customer" style="min-width:200px;">CREATED AT</th>
+                <th class="text-end pe-0 align-middle" scope="col"></th>
               </tr>
             </thead>
             <tbody class="list" id="table-latest-review-body">
-              <tr class="hover-actions-trigger btn-reveal-trigger position-static">
-                <td class="fs--1 align-middle ps-0">
-                  <div class="form-check mb-0 fs-0"><input class="form-check-input" type="checkbox" data-bulk-select-row='{"product":"Fitbit Sense Advanced Smartwatch with Tools for Heart Health, Stress Management & Skin Temperature Trends, Carbon/Graphite, One Size (S & L Bands)","productImage":"/products/60x60/1.png","customer":{"name":"Richard Dawkins","avatar":""},"rating":5,"review":"This Fitbit is fantastic! I was trying to be in better shape and needed some motivation, so I decided to treat myself to a new Fitbit.","status":{"title":"Approved","badge":"success","icon":"check"},"time":"Just now"}' /></div>
-                </td>
-                <td class="align-middle product white-space-nowrap py-0"><a class="d-block rounded-2 border" href="apps/e-commerce/landing/product-details.html"><img src="assets/img/products/60x60/1.png" alt="" width="53" /></a></td>
-                <td class="align-middle product white-space-nowrap"><a class="fw-semi-bold" href="apps/e-commerce/landing/product-details.html">Fitbit Sense Advanced Smartwatch with Tools fo...</a></td>
-                <td class="align-middle customer white-space-nowrap"><a class="d-flex align-items-center text-900" href="apps/e-commerce/landing/profile.html">
-                    <div class="avatar avatar-l">
-                      <div class="avatar-name rounded-circle"><span>R</span></div>
-                    </div>
-                    <h6 class="mb-0 ms-3 text-900">Richard Dawkins</h6>
-                  </a></td>
-                <td class="align-middle rating white-space-nowrap fs--2"><span class="fa fa-star text-warning"></span><span class="fa fa-star text-warning"></span><span class="fa fa-star text-warning"></span><span class="fa fa-star text-warning"></span><span class="fa fa-star text-warning"></span></td>
-                <td class="align-middle review" style="min-width:350px;">
-                  <p class="fs--1 fw-semi-bold text-1000 mb-0">This Fitbit is fantastic! I was trying to be in better shape and needed some motivation, so I decided to treat myself to a new Fitbit.</p>
-                </td>
-                <td class="align-middle text-start ps-5 status"><span class="badge badge-phoenix fs--2 badge-phoenix-success"><span class="badge-label">Approved</span><span class="ms-1" data-feather="check" style="height:12.8px;width:12.8px;"></span></span></td>
-                <td class="align-middle text-end time white-space-nowrap">
-                  <div class="hover-hide">
-                    <h6 class="text-1000 mb-0">Just now</h6>
-                  </div>
-                </td>
-                <td class="align-middle white-space-nowrap text-end pe-0">
-                  <div class="position-relative">
-                    <div class="hover-actions"><button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button><button class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></button></div>
-                  </div>
-                  <div class="font-sans-serif btn-reveal-trigger position-static"><button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs--2"></span></button>
-                    <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
-                      <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+                @foreach ($userlist as $item)
+                <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                    <td class="price align-middle fw-bold text-1000">
+                        {{ $loop->iteration }}
+                    </td>
+                    <td class="align-middle product white-space-nowrap">{{ $item->email }}</td>
+                    <td class="align-middle product white-space-nowrap">{{ $item->name }}</td>
+                    <td class="align-middle text-start ps-5 status">
+                        @if($item->role == 'admin')
+                            <span class="badge badge-phoenix fs--2 badge-phoenix-success">
+                                <span class="badge-label">{{ $item->role }}</span>
+                                <span class="ms-1" data-feather="check" style="height:12.8px;width:12.8px;"></span>
+                            </span>
+                        @elseif($item->role == 'waiting')
+                            <span class="badge badge-phoenix fs--2 badge-phoenix-warning">
+                                <span class="badge-label">{{ $item->role }}</span>
+                                <span class="ms-1" data-feather="pause" style="height:12.8px;width:12.8px;"></span>
+                            </span>
+                        @elseif($item->role == 'user')
+                            <span class="badge badge-phoenix fs--2 badge-phoenix-primary">
+                                <span class="badge-label">{{ $item->role }}</span>
+                                <span class="ms-1" data-feather="user" style="height:12.8px;width:12.8px;"></span>
+                            </span>
+                        @endif
+                    </td>
+                    <td class="time align-middle white-space-nowrap text-600 ps-4">
+                        {{ $item->created_at->format('d M Y') }}
+                    </td>
+                </tr>
+                @endforeach
             </tbody>
           </table>
         </div>
@@ -142,10 +134,7 @@
     <footer class="footer position-absolute">
       <div class="row g-0 justify-content-between align-items-center h-100">
         <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for creating with Phoenix<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;<a class="mx-1" href="https://themewagon.com/">Themewagon</a></p>
-        </div>
-        <div class="col-12 col-sm-auto text-center">
-          <p class="mb-0 text-600">v1.13.0</p>
+          <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
         </div>
       </div>
     </footer>

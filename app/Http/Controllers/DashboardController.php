@@ -16,7 +16,8 @@ class DashboardController extends Controller
         $batik = Batik::all();
         $adminlist = User::where('role', 'admin')->get();
         $approval = User::where('role', 'waiting')->get();
-        return view('admin.dashboard', compact('batik', 'adminlist', 'approval'));
+        $userlist = User::all();
+        return view('admin.dashboard', compact('batik', 'adminlist', 'approval', 'userlist'));
     }
 
     /**

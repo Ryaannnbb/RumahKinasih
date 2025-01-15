@@ -89,7 +89,6 @@
                                         class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15">
                                         <img class="auth-title-box-img d-dark-none"
                                             src="../../../assets/img/icons/ibubatik.png"
-                                            src="{{ asset('assets/img/icons/ibubatik.jpeg') }}"
                                             alt="" /><img class="auth-title-box-img d-light-none"
                                             src="../../../assets/img/icons/ibubatik.png" alt="" />
                                     </div>
