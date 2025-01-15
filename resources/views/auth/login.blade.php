@@ -103,7 +103,6 @@
                                             <h3 class="text-1000">Sign In</h3>
                                             <p class="text-700">Get access to your account</p>
                                         </div>
-
                                         <form action="{{ route('postlogin') }}" method="POST">
                                             @csrf
                                             <div class="mb-3 text-start">
