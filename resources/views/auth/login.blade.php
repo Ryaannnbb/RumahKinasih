@@ -97,7 +97,7 @@
                                     <div
                                         class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15">
                                         <img class="auth-title-box-img d-dark-none"
-                                            src="../../../assets/img/icons/ibubatik.jpeg"
+                                            src="{{ asset('assets/img/icons/ibubatik.jpeg') }}"
                                             alt="" /><img class="auth-title-box-img d-light-none"
                                             src="../../../assets/img/icons/ibubatik.jpeg" alt="" />
                                     </div>
@@ -112,7 +112,7 @@
                                             <h3 class="text-1000">Sign In</h3>
                                             <p class="text-700">Get access to your account</p>
                                         </div>
-                                        
+
                                         <form action="{{ route('postlogin') }}" method="POST">
                                             @csrf
                                             <div class="mb-3 text-start">
