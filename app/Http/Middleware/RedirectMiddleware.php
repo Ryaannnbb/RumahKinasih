@@ -23,7 +23,7 @@ class RedirectMiddleware
                 }
             } else if (Auth::user()->role === 'user') {
                 if ($request->route()->getName() !== 'logout') {
-                    return redirect()->route('kain');
+                    return redirect()->route('homepage');
                 }
             }
         }

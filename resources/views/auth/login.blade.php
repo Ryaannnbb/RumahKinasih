@@ -81,25 +81,20 @@
                                     <!--/.bg-holder-->
                                     <div
                                         class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
-                                        <h5 class="mb-3 text-black fs-1">Rumah Kinasih</h5>
-                                        <ul class="list-unstyled mb-0 w-max-content w-md-auto mx-auto">
-                                            {{-- <li class="d-flex align-items-center"><span
-                                                    class="uil uil-check-circle text-success me-2"></span><span
-                                                    class="text-700 fw-semi-bold">Fast</span></li>
-                                            <li class="d-flex align-items-center"><span
-                                                    class="uil uil-check-circle text-success me-2"></span><span
-                                                    class="text-700 fw-semi-bold">Simple</span></li>
-                                            <li class="d-flex align-items-center"><span
-                                                    class="uil uil-check-circle text-success me-2"></span><span
-                                                    class="text-700 fw-semi-bold">Responsive</span></li> --}}
-                                        </ul>
+                                        <h2 class="mb-3 text-black">HI USERS!</h2>
+                                            <p class="text-700">Welcome back to our platform.</p>
+                                                <p class="text-700"> Log in with your account to access the best features, trusted services, and convenience in one hand. Don't forget, the best experience starts here.</p>
                                     </div>
                                     <div
                                         class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15">
                                         <img class="auth-title-box-img d-dark-none"
-                                            src="../../../assets/img/icons/ibubatik.jpeg"
+<<<<<<< HEAD
+                                            src="../../../assets/img/icons/ibubatik.png"
+=======
+                                            src="{{ asset('assets/img/icons/ibubatik.jpeg') }}"
+>>>>>>> ce3f5579cbcddbf46abbf116ac8037d626e3e76f
                                             alt="" /><img class="auth-title-box-img d-light-none"
-                                            src="../../../assets/img/icons/ibubatik.jpeg" alt="" />
+                                            src="../../../assets/img/icons/ibubatik.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="col mx-auto">
@@ -112,7 +107,7 @@
                                             <h3 class="text-1000">Sign In</h3>
                                             <p class="text-700">Get access to your account</p>
                                         </div>
-                                        
+
                                         <form action="{{ route('postlogin') }}" method="POST">
                                             @csrf
                                             <div class="mb-3 text-start">
