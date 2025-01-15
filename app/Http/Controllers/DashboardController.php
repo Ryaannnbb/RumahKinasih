@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batik;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,7 +13,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $batik = Batik::all();
+        $adminlist = User::where('role', 'admin')->get();
+        $approval = Batik::where('role', 'waiting')->get();
+        return view('admin.dashboard', compact('batik'));
     }
 
     /**

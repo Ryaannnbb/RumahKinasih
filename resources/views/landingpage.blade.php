@@ -76,13 +76,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item border-bottom border-bottom-lg-0">
-                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3 active" aria-current="page" href="#">Home</a>
+                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3 active" aria-current="page" href="{{ url('/') }}">Home</a>
               </li>
               <li class="nav-item border-bottom border-bottom-lg-0">
-                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="#feature">Product</a>
+                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="{{ url('/listproduk') }}">Produk</a>
               </li>
               <li class="nav-item border-bottom border-bottom-lg-0">
-                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="#blog">Blog</a>
+                <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="https://www.rumahkinasih.org/berita">Blog</a>
               </li>
               <li class="nav-item border-bottom border-bottom-lg-0">
                 <a class="nav-link lh-1 py-0 fs--1 fw-bold py-3" href="{{ route('login') }}">Login</a>
@@ -248,25 +248,48 @@
 
       <section class="bg-white pb-lg-6 pb-xl-8">
         <div class="bg-holder d-dark-none" style="background-image:url(../../assets/img/bg/bg-5.png);background-size:auto;"></div>
-        <!--/.bg-holder-->
         <div class="bg-holder d-light-none" style="background-image:url(../../assets/img/bg/bg-dark-5.png);background-size:auto;"></div>
-        <!--/.bg-holder-->
         <div class="bg-holder" style="background-image:url(../../assets/img/bg/bg-left-5.png);background-position:left;background-size:auto;"></div>
-        <!--/.bg-holder-->
         <div class="bg-holder" style="background-image:url(../../assets/img/bg/bg-right-6.png);background-position:right;background-size:auto;"></div>
-        <!--/.bg-holder-->
+      
         <div class="container-small position-relative px-lg-7 px-xxl-3">
           <div class="row mb-4 text-center">
             <div class="col-12">
               <h1>Produk Yang Tersedia di&nbsp;<span class="text-primary">Rumah Kinasih</span></h1>
             </div>
           </div>
-          <div class="row g-3" id="image_gallery" style="min-height: 500px" data-sl-isotope='{"layoutMode":"packery"}'>
-            <div class="col-6 col-md-4 col-lg-3 px-2 isotope-item fourth"><a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="../../assets/img/gallery/1.png"><img class="rounded img-fluid w-100" src="../../assets/img/gallery/1.png" alt=""></a></div>
-            <div class="col-6 col-md-4 col-lg-3 px-2 isotope-item third"><a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="../../assets/img/gallery/2.png"><img class="rounded img-fluid w-100" src="../../assets/img/gallery/2.png" alt=""></a></div>
-            <div class="col-6 col-md-4 col-lg-3 px-2 isotope-item second"><a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="../../assets/img/gallery/3.png"><img class="rounded img-fluid w-100" src="../../assets/img/gallery/3.png" alt=""></a></div>
-            <div class="col-6 col-md-4 col-lg-3 px-2 isotope-item third"><a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="../../assets/img/gallery/5.png"><img class="rounded img-fluid w-100" src="../../assets/img/gallery/5.png" alt=""></a></div>
-            <div class="col-6 col-md-4 col-lg-3 px-2 isotope-item third second"><a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="../../assets/img/gallery/4.png"><img class="rounded img-fluid w-100" src="../../assets/img/gallery/4.png" alt=""></a></div>
+      
+          <div class="row justify-content-center g-4" id="image_gallery" style="min-height: 500px" data-sl-isotope='{"layoutMode":"packery"}'>
+            <!-- Item 1 -->
+            <div class="col-6 col-md-4 px-2 isotope-item fourth">
+              <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/tas_pouch.jpeg">
+                <img class="rounded img-fluid w-100" src="images/tas_pouch.jpeg" alt="">
+              </a>
+            </div>
+            <!-- Item 2 -->
+            <div class="col-6 col-md-4 px-2 isotope-item">
+              <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/batik_ciprat2.jpg">
+                <img class="rounded img-fluid w-100" src="images/batik_ciprat2.jpg" alt="">
+              </a>
+            </div>
+            <!-- Item 3 -->
+            <div class="col-6 col-md-4 px-2 isotope-item">
+              <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/topi.jpg">
+                <img class="rounded img-fluid w-100" src="images/topi.jpg" alt="">
+              </a>
+            </div>
+            <!-- Item 4 -->
+            <div class="col-6 col-md-4 px-2 isotope-item">
+              <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/baju.jpg">
+                <img class="rounded img-fluid w-100" src="images/baju.jpg" alt="">
+              </a>
+            </div>
+            <!-- Item 5 -->
+            <div class="col-6 col-md-4 px-2 isotope-item">
+              <a href="#!" data-bigpicture='{"gallery":"#image_gallery"}' data-bp="images/kerudung.jpeg">
+                <img class="rounded img-fluid w-100" src="images/kerudung.jpeg" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -343,7 +366,7 @@
         <div class="position-relative"><svg class="w-100 text-white" preserveAspectRatio="none" viewBox="0 0 1920 368" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1920 0.44L0 367.74V0H1920V0.44Z" fill="currentColor"></path>
           </svg>
-          <section class="footer-default">
+          <section class="footer-small">
             <div class="container-small px-lg-7 px-xxl-3">
               <div class="row position-relative">
                 <div class="col-12 col-sm-12 col-lg-5 mb-4 order-0 order-sm-0"><a href="#"><img class="mb-3" src="images/logo_kinasih_white_small.png" height="80" alt="" /></a>
@@ -370,8 +393,9 @@
                       <div class="border-dashed border-start border-primary-300 ps-3" style="--phoenix-border-opacity: .2;">
                         <h5 class="lh-lg fw-bold text-light mb-2 light">Info</h5>
                         <ul class="list-unstyled mb-md-2">
-                          <li class="mb-1"><a class="text-500 hover-text-100 light" href="https://www.rumahkinasih.org/home">Tentang Kami</a></li>
-                          <li class="mb-1"><a class="text-500 hover-text-100 light" href="#!">Developer Web</a></li>
+                          <li class="mb-1"><a class="text-500 hover-text-100 light" href="https://www.rumahkinasih.org/profil/visi-dan-misi">Visi & Misi</a></li>
+                          <li class="mb-1"><a class="text-500 hover-text-100 light" href="https://www.rumahkinasih.org/profil/tentang-kami">Tentang Kami</a></li>
+                          <li class="mb-1"><a class="text-500 hover-text-100 light" href="https://www.rumahkinasih.org/profil/tim-kami">Tim Kami</a></li>
                         </ul>
                       </div>
                     </div>
