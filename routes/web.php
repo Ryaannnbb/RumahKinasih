@@ -26,13 +26,18 @@ use App\Http\Controllers\ListProdukUserController;
 Route::get('/', function () {
     return view('landingpage');
 });
+Route::get('/testbatik', function () {
+    return view('admin_batik');
+});
+
+
 // Route::get('/home', function () {
 //     return view('admin.kategori.index');
 // });
 // Route::get('/kain', function () {
 //     return view('admin_kain');
 // })->name('kain');
-// Route::get('/batik', function () {
+// Route::get('/testbatik', function () {
 //     return view('admin_batik');
 // });
 // Route::get('/transaksi', function () {

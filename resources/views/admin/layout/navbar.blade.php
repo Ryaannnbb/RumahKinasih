@@ -6,19 +6,27 @@
       }
     </script>
     <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-      <!-- scrollbar removed-->
       <div class="navbar-vertical-content">
         <ul class="navbar-nav flex-column" id="navbarVerticalNav">
           <li class="nav-item">
-            <!-- parent pages-->
-            <div class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}" data-bs-toggle="" aria-expanded="false">
+            <!-- Parent Pages -->
+            <div class="nav-item">
+              <a class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}" data-bs-toggle="" aria-expanded="false">
                 <div class="d-flex align-items-center">
                   <span class="nav-link-icon"><span data-feather="pie-chart"></span></span>
                   <span class="nav-link-text">Dashboard</span>
                 </div>
               </a>
             </div>
-            <div class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#nv-home" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-home">
+    
+            <!-- Data List Dropdown -->
+            <div class="nav-item-wrapper">
+              <a class="nav-link dropdown-indicator label-1 {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'active' : '' }}" 
+                 href="#nv-home" 
+                 role="button" 
+                 data-bs-toggle="collapse" 
+                 aria-expanded="{{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'true' : 'false' }}" 
+                 aria-controls="nv-home">
                 <div class="d-flex align-items-center">
                   <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div>
                   <span class="nav-link-icon"><span data-feather="archive"></span></span>
@@ -26,23 +34,24 @@
                 </div>
               </a>
               <div class="parent-wrapper label-1">
-                <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-home">
+                <ul class="nav collapse parent {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'show' : '' }}" 
+                    data-bs-parent="#navbarVerticalCollapse" 
+                    id="nv-home">
                   <li class="collapsed-nav-item-title d-none">Data List</li>
-                </li>
-                  <li class="nav-item"><a class="nav-link" href="{{ route('batik.index') }}" data-bs-toggle="" aria-expanded="false">
+                  <li class="nav-item">
+                    <a class="nav-link {{ Request::routeIs('batik.index') ? 'active' : '' }}" href="{{ route('batik.index') }}">
                       <div class="d-flex align-items-center"><span class="nav-link-text">Batik</span></div>
-                    </a><!-- more inner pages-->
+                    </a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{{ route('bahan.index') }}" data-bs-toggle="" aria-expanded="false">
+                  <li class="nav-item">
+                    <a class="nav-link {{ Request::routeIs('bahan.index') ? 'active' : '' }}" href="{{ route('bahan.index') }}">
                       <div class="d-flex align-items-center"><span class="nav-link-text">Bahan Batik</span></div>
-                    </a><!-- more inner pages-->
+                    </a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{{ route('adminlist') }}" data-bs-toggle="" aria-expanded="false">
-                    <div class="d-flex align-items-center">
-                        <span class="nav-link-text">Admin List</span>
-                        {{-- <span class="badge ms-2 badge badge-phoenix badge-phoenix-info">New</span> --}}
-                    </div>
-                    </a><!-- more inner pages-->
+                  <li class="nav-item">
+                    <a class="nav-link {{ Request::routeIs('adminlist') ? 'active' : '' }}" href="{{ route('adminlist') }}">
+                      <div class="d-flex align-items-center"><span class="nav-link-text">Admin List</span></div>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -51,7 +60,13 @@
         </ul>
       </div>
     </div>
-    <div class="navbar-vertical-footer"><button class="btn navbar-vertical-toggle border-0 fw-semi-bold w-100 white-space-nowrap d-flex align-items-center"><span class="uil uil-left-arrow-to-left fs-0"></span><span class="uil uil-arrow-from-right fs-0"></span><span class="navbar-vertical-footer-text ms-2">Collapsed View</span></button></div>
+    
+    
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-vertical-footer"><button class="btn navbar-vertical-toggle border-0 fw-semi-bold w-100 white-space-nowrap d-flex align-items-center"><span class="uil uil-left-arrow-to-left fs-0"></span><span class="uil uil-arrow-from-right fs-0"></span><span class="navbar-vertical-footer-text ms-2">Kecilkan Sidebar</span></button></div>
   </nav>
   <nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault" style="display:none;">
     <div class="collapse navbar-collapse justify-content-between">
