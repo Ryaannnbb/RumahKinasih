@@ -18,14 +18,14 @@
                 </div>
               </a>
             </div>
-    
+
             <!-- Data List Dropdown -->
             <div class="nav-item-wrapper">
-              <a class="nav-link dropdown-indicator label-1 {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'active' : '' }}" 
-                 href="#nv-home" 
-                 role="button" 
-                 data-bs-toggle="collapse" 
-                 aria-expanded="{{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'true' : 'false' }}" 
+              <a class="nav-link dropdown-indicator label-1 {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'active' : '' }}"
+                 href="#nv-home"
+                 role="button"
+                 data-bs-toggle="collapse"
+                 aria-expanded="{{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'true' : 'false' }}"
                  aria-controls="nv-home">
                 <div class="d-flex align-items-center">
                   <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div>
@@ -34,8 +34,8 @@
                 </div>
               </a>
               <div class="parent-wrapper label-1">
-                <ul class="nav collapse parent {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'show' : '' }}" 
-                    data-bs-parent="#navbarVerticalCollapse" 
+                <ul class="nav collapse parent {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'show' : '' }}"
+                    data-bs-parent="#navbarVerticalCollapse"
                     id="nv-home">
                   <li class="collapsed-nav-item-title d-none">Data List</li>
                   <li class="nav-item">
@@ -60,8 +60,8 @@
         </ul>
       </div>
     </div>
-    
-    
+
+
           </li>
         </ul>
       </div>
@@ -124,7 +124,7 @@
           <a class="nav-link" id="navbarDropdownNotification" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false"><span data-feather="bell" style="height:12px;width:12px;"></span></a>
 
         </li>
-      
+
           <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-nide-dots shadow border border-300" aria-labelledby="navbarDropdownNindeDots">
             <div class="card bg-white position-relative border-0">
               <div class="card-body pt-3 px-3 pb-0 overflow-auto scrollbar" style="height: 20rem;">
@@ -719,7 +719,7 @@
       <li class="nav-item">
         <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
       </li>
-    
+
         <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-nide-dots shadow border border-300" aria-labelledby="navbarDropdownNindeDots">
           <div class="card bg-white position-relative border-0">
             <div class="card-body pt-3 px-3 pb-0 overflow-auto scrollbar" style="height: 20rem;">
@@ -790,7 +790,7 @@
             <div class="overflow-auto scrollbar" style="height: 10rem;">
               <ul class="nav d-flex flex-column mb-2 pb-1">
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user"></span><span>Profile</span></a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="pie-chart"></span>Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="pie-chart"></span>Beranda</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="lock"></span>Posts &amp; Activity</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="settings"></span>Settings &amp; Privacy </a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="help-circle"></span>Help Center</a></li>

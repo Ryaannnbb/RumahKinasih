@@ -8,8 +8,7 @@
             <div class="row g-4">
                 <div class="col-12 col-xxl-6">
                     <div class="mb-8">
-                        <h2 class="mb-2">Rumah Kinasih Dashboard</h2>
-                        <h5 class="text-700 fw-semi-bold">Here’s what’s going on at your business right now</h5>
+                        <h2 class="mb-2">Beranda Rumah Kinasih</h2>
                     </div>
                     <div class="row align-items-center g-4">
                         <div class="col-12 col-md-auto">
@@ -20,7 +19,7 @@
                                     <span class="fa-stack-1x fa-solid fa-user text-primary" data-fa-transform="shrink-2 up-8 right-6"></span>
                                 </span>
                                 <div class="ms-3">
-                                    <h4 class="mb-0">{{ $batik->count() }} available batik</h4>
+                                    <h4 class="mb-0">{{ $batik->count() }} Produk yang tersedia</h4>
                                     @if($batik->count() > 0)
                                         <p class="text-800 fs--1 mb-0">Awaiting processing</p>
                                     @else
@@ -73,8 +72,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <h5 class="mb-1">Total Pembelian<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"><span class="badge-label">-6.8%</span></span></h5>
-                                            <h6 class="text-700">Last 7 days</h6>
+                                            <h5 class="mb-1">Total produk yangg dibuat setiap bulan<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"><span class="badge-label">-6.8%</span></span></h5>
                                         </div>
                                         <h4>16,247</h4>
                                     </div>
@@ -92,7 +90,7 @@
                                             },
                                             series: [
                                                 {
-                                                    name: "Series 1",
+                                                    name: "Produk yang dibuat",
                                                     data: [45, 52, 38, 45, 19, 23, 2]
                                                 }
                                             ],
@@ -107,13 +105,18 @@
                                             },
                                             xaxis: {
                                                 categories: [
-                                                    "01 Jan",
-                                                    "02 Jan",
-                                                    "03 Jan",
-                                                    "04 Jan",
-                                                    "05 Jan",
-                                                    "06 Jan",
-                                                    "07 Jan"
+                                                    "Januari",
+                                                    "Febuari",
+                                                    "Maret",
+                                                    "April",
+                                                    "Mei",
+                                                    "Juni",
+                                                    "Juli",
+                                                    "Agustus",
+                                                    "September",
+                                                    "Oktober",
+                                                    "November",
+                                                    "Desember",
                                                 ]
                                             }
                                         };
