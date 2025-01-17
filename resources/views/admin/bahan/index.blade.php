@@ -21,7 +21,7 @@
             </div>
             <div class="ms-xxl-auto">
               <a href="{{ route('bahan.create') }}" class="btn btn-primary" id="addBtn">
-                <span class="fas fa-plus me-2"></span>Add product
+                <span class="fas fa-plus me-2"></span>Tambah Produk
               </a>
             </div>
           </div>

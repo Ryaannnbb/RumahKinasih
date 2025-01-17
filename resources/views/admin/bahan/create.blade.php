@@ -10,8 +10,8 @@
                 <h5 class="text-700 fw-semi-bold">Wajib diisi semua sebelum menambahkan produk baru</h5>
             </div>
             <div class="col-auto">
-                <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('bahan.store') }}">Cancel</a>
-                <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Add</button>
+                <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('bahan.store') }}">Batalkan</a>
+                <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Tambah</button>
             </div>
         </div>
         <div class="row g-5">

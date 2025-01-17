@@ -11,8 +11,8 @@
                 <h5 class="text-700 fw-semi-bold">Wajib diisi semua sebelum mengedit produk</h5>
             </div>
             <div class="col-auto">
-                <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('bahan.index') }}">Cancel</a>
-                <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Update</button>
+                <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('bahan.index') }}">Batalkan</a>
+                <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Perbarui</button>
             </div>
         </div>
         <div class="row g-5">

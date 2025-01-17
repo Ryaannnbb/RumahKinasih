@@ -20,7 +20,7 @@
             </div>
             <div class="ms-xxl-auto">
               <a href="{{ route('batik.create') }}" class="btn btn-primary" id="addBtn">
-                <span class="fas fa-plus me-2"></span>Add product
+                <span class="fas fa-plus me-2"></span>Tambah Produk
               </a>
             </div>
           </div>
@@ -32,13 +32,13 @@
                 <tr>
                     <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">NO</th>
                     <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;"></th>
-                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">PRODUCT NAME</th>
-                    <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">PRICE</th>
-                    <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">STOCK</th>
+                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">NAMA PRODUK</th>
+                    <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">HARGA</th>
+                    <th class="sort align-middle text-end ps-4" scope="col" style="width:150px;">STOK</th>
                     <th class="sort align-middle white-space-nowrap ps-4" scope="col" style="width:150px;">NAMA BAHAN</th>
                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">SERI PRODUK</th>
-                    <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESCRIPTION</th>
-                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">CREATED AT</th>
+                    <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESKRIPSI</th>
+                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">DIBUAT PADA</th>
                     <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                 </tr>
               </thead>
@@ -48,7 +48,7 @@
                     <td colspan="8" class="text-center py-4">
                         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px; height: auto;">
                             <img src="{{ asset('images/no-data-amico.svg') }}" alt="No data" style="width: 300px; height: auto; max-width: 100%;">
-                            <h3 class="mt-3 mb-0">No data available</h3>
+                            <h3 class="mt-3 mb-0">Tidak ada data yang tersedia</h3>
                         </div>
                     </td>
                 </tr>
@@ -120,7 +120,7 @@
                                 <form action="{{ route('batik.destroy', $item->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="dropdown-item text-danger hapus">Remove</button>
+                                    <button type="submit" class="dropdown-item text-danger hapus">Hapus</button>
                                 </form>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
             <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
                 <div class="col-auto d-flex">
                     <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p>
-                    <a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold" href="#!" data-list-view="*">Lihat semua<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
                     <a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
                 </div>
                 <div class="col-auto d-flex">

@@ -6,35 +6,35 @@
             @csrf
             <div class="row g-3 flex-between-end mb-5">
                 <div class="col-auto">
-                    <h2 class="mb-2">Add Product</h2>
-                    <h5 class="text-700 fw-semi-bold">Please complete the form below to add a new product.</h5>
+                    <h2 class="mb-2">Tambah Produk</h2>
+                    <h5 class="text-700 fw-semi-bold">Isi semua kolom sebelum menyimpan produk baru.</h5>
                 </div>
                 <div class="col-auto">
-                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('batik.index') }}">Cancel</a>
-                    <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Add</button>
+                    <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('batik.index') }}">Batalkan</a>
+                    <button class="btn btn-primary mb-2 mb-sm-0" type="submit">Tambah</button>
                 </div>
             </div>
             <div class="row g-5">
                 <div class="col-12 col-xl-8">
                     <div class="mb-3">
-                        <label for="namaProduk"><h4 class="mb-3">Product Name</h4></label>
+                        <label for="namaProduk"><h4 class="mb-3">Produk Baru</h4></label>
                         <input class="form-control @error('nama_produk') is-invalid @enderror" id="namaProduk" type="text" placeholder="Enter Product Name" name="nama_produk" value="{{ old('nama_produk') }}"/>
                         @error('nama_produk')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
                     <div class="mb-6">
-                        <label for="deskripsiProduk"><h4 class="mb-3">Product Description</h4></label>
+                        <label for="deskripsiProduk"><h4 class="mb-3">Deskripsi Produk</h4></label>
                         <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsiProduk" name="deskripsi" rows="5" placeholder="Enter Product Description">{{ old('deskripsi') }}</textarea>
                         @error('deskripsi')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
                     <div class="mb-5">
-                        <label for="fotoProduk"><h4 class="mb-3">Product Image (Recommended: 1:1 Ratio)</h4></label>
+                        <label for="fotoProduk"><h4 class="mb-3">Foto Produk (Recommended: 1:1 Ratio)</h4></label>
                         <input class="form-control @error('gambar_produk') is-invalid @enderror" id="fotoProduk" type="file" name="gambar_produk">
                         <img class="mt-2" id="image-preview" src="#" alt="Preview" style="display: none; width: 100%; height: auto; border-radius: 5px">
-                        <strong class="invalid-feedback" id="image-error" style="display: none;">This input must be an image</strong>
+                        <strong class="invalid-feedback" id="image-error" style="display: none;">hanya bisa mengirim foto</strong>
                         @error('gambar_produk')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
@@ -68,17 +68,17 @@
                         <div class="col-12 col-xl-12">
                             <div class="card mb-3">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-4">Others</h4>
+                                    <h4 class="card-title mb-4">Lainnya</h4>
                                     <div class="row gx-3">
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
-                                                    <label for="bahanBatik" class="mb-0 text-1000 me-2"><h5>Category</h5></label>
-                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Add a New Material?</a>
+                                                    <label for="bahanBatik" class="mb-0 text-1000 me-2"><h5>Kategori</h5></label>
+                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Tambahkan Kategori baru?</a>
                                                 </div>
                                                 <select class="form-select mb-3 @error('bahan_id') is-invalid @enderror" id="bahanBatik" name="bahan_id">
                                                     @if($bahan->isEmpty())
-                                                        <option value="">No bahan data available</option>
+                                                        <option value="">Tidak ada data bahan yang tersedia</option>
                                                     @else
                                                         @foreach($bahan as $bahans)
                                                             <option value="{{ $bahans->id }}" {{ old('bahan_id') == $bahans->id ? 'selected' : '' }}>{{ $bahans->nama_bahan }}</option>
@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
-                                                <label for="hargaProduk" class="mb-2 text-1000"><h5>Price</h5></label>
+                                                <label for="hargaProduk" class="mb-2 text-1000"><h5>Harga</h5></label>
                                                 <input class="form-control @error('harga') is-invalid @enderror" id="hargaProduk" type="number" placeholder="Enter Price" name="harga" value="{{ old('harga') }}" />
                                                 @error('harga')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
-                                                <label for="seriProduct" class="mb-2 text-1000"><h5>Seri Product</h5></label>
+                                                <label for="seriProduct" class="mb-2 text-1000"><h5>Seri Produk</h5></label>
                                                 <input class="form-control @error('seri_produk') is-invalid @enderror" id="seriProduct" type="text" placeholder="Enter Seri Product" name="seri_produk" value="{{ old('seri_produk') }}" />
                                                 @error('seri_produk')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
