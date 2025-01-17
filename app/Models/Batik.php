@@ -22,4 +22,8 @@ class Batik extends Model
     public function bahan(){
         return $this->belongsTo(Bahan::class);
     }
+
+    public function detailTransaksi(){
+        return $this->hasMany(DetailTransaksi::class);
+    }
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminListController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ListProdukUserController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}','update')->name('batik.update');
         Route::delete('destroy/{id}','destroy')->name('batik.destroy');
     });
-    
+
     Route::controller(BahanController::class)->prefix('bahan')->group(function (){
         Route::get('/','index')->name('bahan.index');
         Route::get('create','create')->name('bahan.create');
@@ -69,15 +70,25 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::put('update/{id}','update')->name('bahan.update');
         Route::delete('destroy/{id}','destroy')->name('bahan.destroy');
     });
-    
+
     Route::controller(DashboardController::class)->prefix('dashboard')->group(function () {
         Route::get('/', 'index')->name('dashboard');
     });
-    
+
     Route::controller(AdminListController::class)->prefix('adminlist')->group(function () {
         Route::get('/', 'index')->name('adminlist');
         Route::patch('approve/{id}', 'update')->name('adminlist.approve');
         Route::delete('destroy/{id}', 'destroy')->name('adminlist.destroy');
+    });
+
+    Route::controller(TransaksiController::class)->prefix('transaksi')->group(function () {
+        Route::get('/', 'index')->name('transaksi.index');
+        Route::get('create', 'create')->name('transaksi.create');
+        Route::post('store', 'store')->name('transaksi.store');
+        Route::get('show/{id}', 'show')->name('transaksi.show');
+        Route::get('edit/{id}', 'edit')->name('transaksi.edit');
+        Route::put('update/{id}', 'update')->name('transaksi.update');
+        Route::delete('destroy/{id}', 'destroy')->name('transaksi.destroy');
     });
 });
 
