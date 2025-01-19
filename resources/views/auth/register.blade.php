@@ -73,9 +73,8 @@
                                 <div class="col-auto bg-100 dark__bg-1100 rounded-3 position-relative overflow-hidden auth-title-box">
                                     <!--/.bg-holder-->
                                     <div class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 card-sign-up">
-                                        <h2 class="mb-3 text-black">HI USERS!</h2>
-                                            <p class="text-700">Welcome to our platform.</p>
-                                                <p class="text-700"> Sign Up with your account to access the best features, trusted services, and convenience in one hand. Don't forget, the best experience starts here.</p>
+                                        <h2 class="mb-3 text-black">BUAT AKUN BARU!</h2>
+                                        <p class="text-700">Silahkan buat akun sesuai keinginan anda.</p>
                                     </div>
                                     <div class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15"><img class="auth-title-box-img d-dark-none" src="../../../assets/img/icons/ibubatik.png" alt="" width="300"/><img class="auth-title-box-img d-light-none" src="../../../assets/img/icons/ibubatik.png" alt="" width="300"/></div>
                                 </div>
@@ -85,14 +84,13 @@
                                             <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="../../../assets/img/icons/logo_kinasih.png" alt="logo_kinasih" width="58" /></div>
                                         </a>
                                         <h3 class="text-1000">Sign Up</h3>
-                                        <p class="text-700">Create your account today</p>
                                     </div>
 
                                     <form method="POST" action="{{ route('postregister') }}">
                                         @csrf
                                         <div class="mb-3 text-start">
-                                            <label class="form-label" for="name">Name</label>
-                                            <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name" />
+                                            <label class="form-label" for="name">Nama</label>
+                                            <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nama" />
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -100,8 +98,8 @@
                                             @enderror
                                         </div>
                                         <div class="mb-3 text-start">
-                                            <label class="form-label" for="email">Email address</label>
-                                            <input class="form-control @error('email') is-invalid @enderror" id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="name@example.com" />
+                                            <label class="form-label" for="email">Email</label>
+                                            <input class="form-control @error('email') is-invalid @enderror" id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="nama@contoh.com" />
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -110,8 +108,8 @@
                                         </div>
                                         <div class="row g-3 mb-3">
                                             <div class="col-xl-6">
-                                                <label class="form-label" for="password">Password</label>
-                                                <input class="form-control form-icon-input @error('password') is-invalid @enderror" id="password" type="password" name="password" required autocomplete="new-password" placeholder="Password" />
+                                                <label class="form-label" for="password">KATA SANDI</label>
+                                                <input class="form-control form-icon-input @error('password') is-invalid @enderror" id="password" type="password" name="password" required autocomplete="new-password" placeholder="Kata Sandi" />
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -119,17 +117,17 @@
                                                 @enderror
                                             </div>
                                             <div class="col-xl-6">
-                                                <label class="form-label" for="confirmPassword">Confirm Password</label>
-                                                <input class="form-control form-icon-input" id="confirmPassword" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password" />
+                                                <label class="form-label" for="confirmPassword">KONFIRMASI</label>
+                                                <input class="form-control form-icon-input" id="confirmPassword" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Korfirmasi Kata Sandi" />
                                             </div>
                                         </div>
                                         <div class="form-check mb-3">
                                             <input class="form-check-input" id="termsService" type="checkbox" required />
-                                            <label class="form-label fs--1 text-none" for="termsService">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
+                                            <label class="form-label fs--1 text-none" for="termsService">Saya menerima&nbsp;<a href="#!">kebijakan&nbsp;</a>Website Rumah Kinasih</label>
                                         </div>
                                         <button class="btn btn-primary w-100 mb-3" type="submit">Sign up</button>
                                         <div class="text-center">
-                                            <a class="fs--1 fw-bold" href="{{ route('login') }}">Sign in to an existing account</a>
+                                            <a class="fs--1 fw-bold" href="{{ route('login') }}">Kembali login</a>
                                         </div>
                                     </form>
                                 </div>

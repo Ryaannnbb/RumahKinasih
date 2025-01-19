@@ -30,14 +30,14 @@
                 <div class="d-flex align-items-center">
                   <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div>
                   <span class="nav-link-icon"><span data-feather="archive"></span></span>
-                  <span class="nav-link-text">Data List</span>
+                  <span class="nav-link-text">List Data</span>
                 </div>
               </a>
               <div class="parent-wrapper label-1">
                 <ul class="nav collapse parent {{ Request::is('batik*') || Request::is('bahan*') || Request::routeIs('adminlist') ? 'show' : '' }}"
                     data-bs-parent="#navbarVerticalCollapse"
                     id="nv-home">
-                  <li class="collapsed-nav-item-title d-none">Data List</li>
+                  <li class="collapsed-nav-item-title d-none">List Data</li>
                   <li class="nav-item">
                     <a class="nav-link {{ Request::routeIs('batik.index') ? 'active' : '' }}" href="{{ route('batik.index') }}">
                       <div class="d-flex align-items-center"><span class="nav-link-text">Batik</span></div>
@@ -50,7 +50,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link {{ Request::routeIs('adminlist') ? 'active' : '' }}" href="{{ route('adminlist') }}">
-                      <div class="d-flex align-items-center"><span class="nav-link-text">Admin List</span></div>
+                      <div class="d-flex align-items-center"><span class="nav-link-text">List Admin & Persetujuan</span></div>
                     </a>
                   </li>
                 </ul>
@@ -82,7 +82,7 @@
       </div>
       <ul class="navbar-nav navbar-nav-icons flex-row">
         <li class="nav-item">
-          <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
+          <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="sun"></span></label></div>
         </li>
         <li class="nav-item dropdown"><a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
             <div class="avatar avatar-l ">
@@ -101,7 +101,7 @@
                 </div>
               <div class="card-footer p-0 border-top">
                 <ul class="nav d-flex flex-column my-3">
-                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="{{ route('logout') }}"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="{{ route('logout') }}"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
             </div>
           </div>
             </div>
@@ -117,7 +117,7 @@
       </div>
       <ul class="navbar-nav navbar-nav-icons flex-row">
         <li class="nav-item">
-          <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
+          <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
         </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchBoxModal"><span data-feather="search" style="height:12px;width:12px;"></span></a></li>
         <li class="nav-item dropdown">
@@ -203,7 +203,7 @@
                   <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
                 </ul>
                 <hr />
-                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+                <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
                 <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
               </div>
             </div>
@@ -511,7 +511,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -538,7 +538,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -565,7 +565,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -717,7 +717,7 @@
     </div>
     <ul class="navbar-nav navbar-nav-icons flex-row">
       <li class="nav-item">
-        <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
+        <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="sun"></span></label></div>
       </li>
 
         <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-nide-dots shadow border border-300" aria-labelledby="navbarDropdownNindeDots">
@@ -802,7 +802,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
               </ul>
               <hr />
-              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
 
           </div>
         </div>
@@ -1102,7 +1102,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1129,7 +1129,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1156,7 +1156,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1308,7 +1308,7 @@
     </div>
     <ul class="navbar-nav navbar-nav-icons flex-row">
       <li class="nav-item">
-        <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
+        <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
       </li>
       <li class="nav-item"> <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchBoxModal"><span data-feather="search" style="height:12px;width:12px;"></span></a></li>
       <li class="nav-item dropdown">
@@ -1398,7 +1398,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
               </ul>
               <hr />
-              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
               <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
             </div>
           </div>
@@ -1705,7 +1705,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1732,7 +1732,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1759,7 +1759,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -1911,7 +1911,7 @@
     </div>
     <ul class="navbar-nav navbar-nav-icons flex-row">
       <li class="nav-item">
-        <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
+        <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="sun"></span></label></div>
       </li>
       <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchBoxModal"><span data-feather="search" style="height:19px;width:19px;margin-bottom: 2px;"></span></a></li>
       <li class="nav-item dropdown">
@@ -2005,7 +2005,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
               </ul>
               <hr />
-              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
               <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
             </div>
           </div>
@@ -2306,7 +2306,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/simple/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -2333,7 +2333,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/split/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -2360,7 +2360,7 @@
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/sign-out.html">
-                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                        <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                       </a></li>
                     <li><a class="dropdown-item" href="../../../pages/authentication/card/forgot-password.html">
                         <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -2512,7 +2512,7 @@
     </div>
     <ul class="navbar-nav navbar-nav-icons flex-row">
       <li class="nav-item">
-        <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
+        <div class="theme-control-toggle fa-ion-wait pe-2 theme-control-toggle-slim"><input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox" data-theme-control="phoenixTheme" value="dark" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="moon"></span><span class="fs--1 fw-bold">Dark</span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon me-1 d-none d-sm-block" data-feather="sun"></span><span class="fs--1 fw-bold">Light</span></label></div>
       </li>
       <li class="nav-item"> <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchBoxModal"><span data-feather="search" style="height:12px;width:12px;"></span></a></li>
       <li class="nav-item dropdown">
@@ -2602,7 +2602,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
               </ul>
               <hr />
-              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+              <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
               <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
             </div>
           </div>
@@ -2625,7 +2625,7 @@
         </div>
         <ul class="navbar-nav navbar-nav-icons flex-row">
           <li class="nav-item">
-            <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon" data-feather="sun"></span></label></div>
+            <div class="theme-control-toggle fa-icon-wait px-2"><input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox" data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="moon"></span></label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left" title="Ganti tema"><span class="icon" data-feather="sun"></span></label></div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" style="min-width: 2.5rem" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside"><span data-feather="bell" style="height:20px;width:20px;"></span></a>
@@ -2718,7 +2718,7 @@
                     <li class="nav-item"><a class="nav-link px-3" href="#!"> <span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
                   </ul>
                   <hr />
-                  <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+                  <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <span class="me-2" data-feather="log-out"> </span>Keluar</a></div>
                   <div class="my-2 text-center fw-bold fs--2 text-600"><a class="text-600 me-1" href="#!">Privacy policy</a>&bull;<a class="text-600 mx-1" href="#!">Terms</a>&bull;<a class="text-600 ms-1" href="#!">Cookies</a></div>
                 </div>
               </div>
@@ -3014,7 +3014,7 @@
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/simple/sign-out.html">
-                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/simple/forgot-password.html">
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -3041,7 +3041,7 @@
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/split/sign-out.html">
-                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/split/forgot-password.html">
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>
@@ -3068,7 +3068,7 @@
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign up</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/card/sign-out.html">
-                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Sign out</div>
+                          <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Keluar</div>
                         </a></li>
                       <li><a class="dropdown-item" href="../../../pages/authentication/card/forgot-password.html">
                           <div class="dropdown-item-wrapper"><span class="me-2 uil"></span>Forgot password</div>

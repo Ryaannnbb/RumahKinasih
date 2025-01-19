@@ -75,9 +75,8 @@
                     <div class="bg-holder" style="background-image:url(../../../assets/img/bg/38.png);"></div>
                     <!--/.bg-holder-->
                     <div class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
-                        <h2 class="mb-3 text-black">HI USERS!</h2>
-                        <p class="text-700">Welcome back to our platform.</p>
-                        <p class="text-700"> Log in with your account to access the best features, trusted services, and convenience in one hand. Don't forget, the best experience starts here.</p>
+                        <h2 class="mb-3 text-black">GANTI KATA SANDI</h2>
+                        <p class="text-700">Silahkan ganti kata sandi akun anda jika lupa.</p>
                     </div>
                     <div class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-5"><img class="auth-title-box-img d-dark-none" src="{{ asset('assets/img/icons/ibubatik.png') }}" alt="" /><img class="auth-title-box-img d-light-none" src="{{ asset('assets/img/icons/ibubatik.png') }}" alt="" /></div>
                   </div>
@@ -86,14 +85,14 @@
                       <div class="text-center"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
                           <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="{{ asset('images/logo_kinasih.png') }}" alt="phoenix" width="58" /></div>
                         </a>
-                        <h4 class="text-1000">Forgot your password?</h4>
-                        <p class="text-700 mb-5">Enter your email below and we will <br class="d-md-none" />send you <br class="d-none d-xxl-block" />a reset link</p>
+                        <h4 class="text-1000">Lupa Sandi?</h4>
+                        <p class="text-700 mb-5">Masukkan email, kita akan mengirimkan link untuk ganti kata sandi</p>
                         <form method="POST" action="{{ route('password.email') }}" class="d-flex align-items-center mb-5">
                             @csrf
                             <input class="form-control flex-1" id="email" type="email" name="email" placeholder="Email" required autofocus />
-                            <button class="btn btn-primary ms-2" type="submit">Send<span class="fas fa-chevron-right ms-2"></span></button>
+                            <button class="btn btn-primary ms-2" type="submit">Kirim<span class="fas fa-chevron-right ms-2"></span></button>
                         </form>
-                        <a class="fs--1 fw-bold" href="{{ route('login') }}">Back to login</a>
+                        <a class="fs--1 fw-bold" href="{{ route('login') }}">Kembali login</a>
                       </div>
                     </div>
                   </div>

@@ -17,21 +17,21 @@
             <div class="row g-5">
                 <div class="col-12 col-xl-8">
                     <div class="mb-3">
-                        <label for="namaProduk"><h4 class="mb-3">Produk Baru</h4></label>
-                        <input class="form-control @error('nama_produk') is-invalid @enderror" id="namaProduk" type="text" placeholder="Enter Product Name" name="nama_produk" value="{{ old('nama_produk') }}"/>
+                        <label for="namaProduk"><h4 class="mb-3">Nama</h4></label>
+                        <input class="form-control @error('nama_produk') is-invalid @enderror" id="namaProduk" type="text" placeholder="Masukkan nama produk" name="nama_produk" value="{{ old('nama_produk') }}"/>
                         @error('nama_produk')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
                     <div class="mb-6">
-                        <label for="deskripsiProduk"><h4 class="mb-3">Deskripsi Produk</h4></label>
-                        <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsiProduk" name="deskripsi" rows="5" placeholder="Enter Product Description">{{ old('deskripsi') }}</textarea>
+                        <label for="deskripsiProduk"><h4 class="mb-3">Deskripsi</h4></label>
+                        <textarea class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsiProduk" name="deskripsi" rows="5" placeholder="Masukkan deskripsi tentang produk">{{ old('deskripsi') }}</textarea>
                         @error('deskripsi')
                             <strong class="invalid-feedback">{{ $message }}</strong>
                         @enderror
                     </div>
                     <div class="mb-5">
-                        <label for="fotoProduk"><h4 class="mb-3">Foto Produk (Recommended: 1:1 Ratio)</h4></label>
+                        <label for="fotoProduk"><h4 class="mb-3">Foto Produk (Rasio 1:1 direkomendasikan)</h4></label>
                         <input class="form-control @error('gambar_produk') is-invalid @enderror" id="fotoProduk" type="file" name="gambar_produk">
                         <img class="mt-2" id="image-preview" src="#" alt="Preview" style="display: none; width: 100%; height: auto; border-radius: 5px">
                         <strong class="invalid-feedback" id="image-error" style="display: none;">hanya bisa mengirim foto</strong>
@@ -74,7 +74,7 @@
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
                                                     <label for="bahanBatik" class="mb-0 text-1000 me-2"><h5>Kategori</h5></label>
-                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Tambahkan Kategori baru?</a>
+                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Tambahkan bahan baru?</a>
                                                 </div>
                                                 <select class="form-select mb-3 @error('bahan_id') is-invalid @enderror" id="bahanBatik" name="bahan_id">
                                                     @if($bahan->isEmpty())
@@ -93,7 +93,7 @@
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
                                                 <label for="hargaProduk" class="mb-2 text-1000"><h5>Harga</h5></label>
-                                                <input class="form-control @error('harga') is-invalid @enderror" id="hargaProduk" type="number" placeholder="Enter Price" name="harga" value="{{ old('harga') }}" />
+                                                <input class="form-control @error('harga') is-invalid @enderror" id="hargaProduk" type="number" placeholder="Masukkan harga" name="harga" value="{{ old('harga') }}" />
                                                 @error('harga')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
@@ -102,7 +102,7 @@
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
                                                 <label for="stokBatik" class="mb-2 text-1000"><h5>Stok</h5></label>
-                                                <input class="form-control @error('stok') is-invalid @enderror" id="stokBatik" type="number" placeholder="Enter Weight" name="stok" value="{{ old('stok') }}" />
+                                                <input class="form-control @error('stok') is-invalid @enderror" id="stokBatik" type="number" placeholder="Masukkan stok" name="stok" value="{{ old('stok') }}" />
                                                 @error('stok')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror
@@ -111,7 +111,7 @@
                                         <div class="col-12 col-sm-6 col-xl-12">
                                             <div class="mb-4">
                                                 <label for="seriProduct" class="mb-2 text-1000"><h5>Seri Produk</h5></label>
-                                                <input class="form-control @error('seri_produk') is-invalid @enderror" id="seriProduct" type="text" placeholder="Enter Seri Product" name="seri_produk" value="{{ old('seri_produk') }}" />
+                                                <input class="form-control @error('seri_produk') is-invalid @enderror" id="seriProduct" type="text" placeholder="Masukkan seri produk" name="seri_produk" value="{{ old('seri_produk') }}" />
                                                 @error('seri_produk')
                                                     <strong class="invalid-feedback">{{ $message }}</strong>
                                                 @enderror

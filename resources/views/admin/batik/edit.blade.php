@@ -40,7 +40,7 @@
                     </div>
                     <div class="mb-5">
                         <label for="productImage">
-                            <h4 class="mb-3">Foto Produk (Recommended: 1:1 Ratio)</h4>
+                            <h4 class="mb-3">Foto Produk (Rasio 1:1 direkomendasikan)</h4>
                         </label>
                         <input class="form-control @error('gambar_produk') is-invalid @enderror" id="productImage"
                             type="file" name="gambar_produk">
@@ -97,7 +97,7 @@
                                                     <label for="bahanBatik" class="mb-0 text-1000 me-2">
                                                         <h5>Bahan</h5>
                                                     </label>
-                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Tambahkan Kategori baru</a>
+                                                    <a class="fw-bold fs--1" href="{{ route('bahan.create') }}">Tambahkan bahan baru?</a>
                                                 </div>
                                                 <select class="form-select mb-3 @error('bahan') is-invalid @enderror"
                                                     id="bahanBatik" name="bahan_id">

@@ -15,13 +15,13 @@
         <div class="mb-4">
           <div class="d-flex flex-wrap gap-3">
             <div class="search-box">
-              <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search" type="search" placeholder="Search products" aria-label="Search" />
+              <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search" type="search" placeholder="Cari bahan" aria-label="Search" />
                 <span class="fas fa-search search-box-icon"></span>
               </form>
             </div>
             <div class="ms-xxl-auto">
               <a href="{{ route('bahan.create') }}" class="btn btn-primary" id="addBtn">
-                <span class="fas fa-plus me-2"></span>Tambah Produk
+                <span class="fas fa-plus me-2"></span>Tambah Bahan
               </a>
             </div>
           </div>
@@ -35,9 +35,9 @@
                     <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;">
                     </th>
                     <th class="text-center ps-4" scope="col" style="width:150px;">
-                        MATERIAL NAME</th>
-                    <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">PRICE</th>
-                    <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">CREATED AT</th>
+                        NAMA BAHAN</th>
+                    <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">HARGA</th>
+                    <th class="sort white-space-nowrap text-center ps-4" scope="col" style="width:50px;">TANGGAL DITAMBAHKAN</th>
                     <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                 </tr>
               </thead>
@@ -81,7 +81,7 @@
                                 <form action="{{ route('bahan.destroy', $bahans->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="dropdown-item text-danger hapus">Remove</button>
+                                    <button type="submit" class="dropdown-item text-danger hapus">Hapus</button>
                                 </form>
                             </div>
                         </div>
@@ -95,8 +95,8 @@
             <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
                 <div class="col-auto d-flex">
                     <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p>
-                    <a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
-                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold" href="#!" data-list-view="*">Lihat semua<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">Lihat sedikit<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
                 </div>
                 <div class="col-auto d-flex">
                     <button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
@@ -111,7 +111,7 @@
     <footer class="footer position-absolute">
         <div class="row g-0 justify-content-between align-items-center h-100">
           <div class="col-12 col-sm-auto text-center">
-            <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
+            <p class="mb-0 mt-2 mt-sm-0 text-900">Terima kasih Rumah Kinasih telah mempercayai kami!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
           </div>
         </div>
       </footer>

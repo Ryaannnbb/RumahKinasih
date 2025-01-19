@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-12 col-lg-10">
                     <a href="https://api.whatsapp.com/send?phone=6282142776116&text=Halo%20saya%20tertarik%20dengan%20produk%20batik%20Anda." class="btn btn-lg btn-primary rounded-pill w-100 fs--1 fs-sm-0">
-                        <span class="fas fa-shopping-cart me-2"></span>Add to cart
+                        <span class="fas fa-shopping-cart me-2"></span>Pesan Sekarang
                     </a>
                 </div>
               </div>
@@ -159,11 +159,11 @@
                   <div>
                     <h3 class="mb-3 lh-sm">{{ $produk->nama_produk }}</h3>
                     <div class="d-flex flex-wrap align-items-center">
-                    <h1 class="me-3">Rp.{{ number_format($produk->harga, 0, ',', '.') }} </h1>
+                    <h1 class="me-3">Rp.&nbsp;{{ number_format($produk->harga, 0, ',', '.') }} </h1>
                       {{-- <p class="text-500 text-decoration-line-through fs-2 mb-0 me-3">$1499.99</p>
                       <p class="text-warning-500 fw-bolder fs-2 mb-0">10% off</p> --}}
                     </div>
-                    <p class="text-success fw-semi-bold fs-1 mb-2">In stock</p>
+                    <p class="text-success fw-semi-bold fs-1 mb-2">Stok tersedia</p>
                     <p class="text-700">Harga yang ditawarkan sudah sangat bersaing, tapi kelebihan produk ini lebih dari sekadar angka. Lihat rincian lengkapnya untuk memahami kualitas dari bahan yang digunakan. Kami percaya, keputusan Anda akan lebih mudah dengan informasi yang transparan ini!</p>
                   </div>
                 </div>
@@ -180,7 +180,7 @@
         <section class="py-0">
           <div class="container-small">
             <ul class="nav nav-underline mb-4" id="productTab" role="tablist">
-              <li class="nav-item"><a class="nav-link active" id="description-tab" data-bs-toggle="tab" href="#tab-description" role="tab" aria-controls="tab-description" aria-selected="true">Description</a></li>
+              <li class="nav-item"><a class="nav-link active" id="description-tab" data-bs-toggle="tab" href="#tab-description" role="tab" aria-controls="tab-description" aria-selected="true">Deskripsi</a></li>
             </ul>
             <div class="row gx-3 gy-7">
               <div class="col-12 col-lg-7 col-xl-8">
@@ -202,9 +202,8 @@
         <div class="container">
           <div class="d-flex flex-between-center mb-3">
             <div>
-              <h3>Similar Products</h3>
-              <p class="mb-0 text-700 fw-semi-bold">Essential for a better life</p>
-            </div><a href="{{ route('homepage') }}" class="btn btn-sm btn-phoenix-primary">View all</a>
+              <h3>Produk Dengan Bahan Sama</h3>
+            </div><a href="{{ route('homepage') }}" class="btn btn-sm btn-phoenix-primary">Lihat semua</a>
           </div>
           <div class="swiper-theme-container products-slider">
             <div class="swiper swiper-container theme-slider" data-swiper='{"slidesPerView":1,"spaceBetween":16,"breakpoints":{"450":{"slidesPerView":2,"spaceBetween":16},"768":{"slidesPerView":3,"spaceBetween":16},"992":{"slidesPerView":4,"spaceBetween":16},"1200":{"slidesPerView":5,"spaceBetween":16},"1540":{"slidesPerView":6,"spaceBetween":16}}}'>

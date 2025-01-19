@@ -75,9 +75,8 @@
                     <div class="bg-holder" style="background-image:url(../../../assets/img/bg/38.png);"></div>
                     <!--/.bg-holder-->
                     <div class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
-                        <h2 class="mb-3 text-black">HI USERS!</h2>
-                        <p class="text-700">Welcome back to our platform.</p>
-                        <p class="text-700"> Log in with your account to access the best features, trusted services, and convenience in one hand. Don't forget, the best experience starts here.</p>
+                        <h2 class="mb-3 text-black">GANTI KATA SANDI</h2>
+                        <p class="text-700">Silahkan ganti kata sandi akun anda.</p>
                     </div>
                     <div class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15"><img class="auth-title-box-img d-dark-none" src="{{ asset('assets/img/icons/ibubatik.png') }}" alt="" /><img class="auth-title-box-img d-light-none" src="{{ asset('assets/img/icons/ibubatik.png') }}" alt="" /></div>
                   </div>
@@ -86,8 +85,8 @@
                       <div class="text-center mb-7"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
                           <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="{{ asset('images/logo_kinasih.png') }}" alt="phoenix" width="58" /></div>
                         </a>
-                        <h4 class="text-1000">Reset new password</h4>
-                        <p class="text-700">Type your new password</p>
+                        <h4 class="text-1000">Ganti kata sandi</h4>
+                        <p class="text-700">Buat kata sandi baru.</p>
                       </div>
                       <form class="mt-5" method="POST" action="{{ route('password.update') }}">
                         @csrf
