@@ -44,6 +44,7 @@
     <link href="{{ asset('assets/css/user-rtl.min.css') }}" type="text/css" rel="stylesheet" id="user-style-rtl">
     <link href="{{ asset('assets/css/user.min.css') }}" type="text/css" rel="stylesheet" id="user-style-default">
     <link href="{{ asset('vendors/choices/choices.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendors/flatpickr/flatpickr.min.css') }}" rel="stylesheet" />
     <script>
         var phoenixIsRTL = window.config.config.phoenixIsRTL;
         if (phoenixIsRTL) {
@@ -181,6 +182,7 @@
     <script src="{{ asset('vendors/dayjs/dayjs.min.js') }}"></script>
     <script src="{{ asset('assets/js/phoenix.js') }}"></script>
     <script src="{{ asset('vendors/choices/choices.min.js') }}"></script>
+    <script src="{{ asset('vendors/flatpickr/flatpickr.min.js') }}"></script>
 </body>
 
 

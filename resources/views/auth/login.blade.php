@@ -81,9 +81,8 @@
                                     <!--/.bg-holder-->
                                     <div
                                         class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
-                                        <h2 class="mb-3 text-black">HI USERS!</h2>
-                                            <p class="text-700">Welcome back to our platform.</p>
-                                                <p class="text-700"> Log in with your account to access the best features, trusted services, and convenience in one hand. Don't forget, the best experience starts here.</p>
+                                        <h2 class="mb-3 text-black">SELAMAT DATANG!</h2>
+                                                <p class="text-700">Login dengan akun Anda untuk mengakses fitur terbaik, layanan terpercaya, dan kenyamanan dalam satu genggaman.</p>
                                     </div>
                                     <div
                                         class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15">
@@ -100,18 +99,17 @@
                                                 href="../../../index.html">
                                                 <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="{{ asset('images/logo_kinasih.png') }}" alt="logo_kinasih" width="58" /></div>
                                             </a>
-                                            <h3 class="text-1000">Sign In</h3>
-                                            <p class="text-700">Get access to your account</p>
+                                            <h3 class="text-1000">Log In</h3>
                                         </div>
                                         <form action="{{ route('postlogin') }}" method="POST">
                                             @csrf
                                             <div class="mb-3 text-start">
-                                                <label class="form-label" for="email">Email address</label>
+                                                <label class="form-label" for="email">Email</label>
                                                 <div class="form-icon-container">
                                                     <input
                                                         class="form-control form-icon-input @error('email') is-invalid @enderror"
                                                         id="email" type="email" name="email"
-                                                        placeholder="name@example.com" value="{{ old('email') }}" />
+                                                        placeholder="nama@contoh.com" value="{{ old('email') }}" />
                                                     <span class="fas fa-user text-900 fs--1 form-icon"></span>
                                                     @error('email')
                                                         <strong class="invalid-feedback">{{ $message }}</strong>
@@ -119,12 +117,12 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3 text-start">
-                                                <label class="form-label" for="password">Password</label>
+                                                <label class="form-label" for="password">Kata Sandi</label>
                                                 <div class="form-icon-container">
                                                     <input
                                                         class="form-control form-icon-input @error('password') is-invalid @enderror"
                                                         id="password" type="password" name="password"
-                                                        placeholder="Password" />
+                                                        placeholder="Kata Sandi" />
                                                     <span class="fas fa-key text-900 fs--1 form-icon"></span>
                                                     @error('password')
                                                         <strong class="invalid-feedback">{{ $message }}</strong>
@@ -138,18 +136,17 @@
                                                             type="checkbox" name="remember"
                                                             {{ old('remember') ? 'checked' : '' }} />
                                                         <label class="form-check-label mb-0"
-                                                            for="basic-checkbox">Remember me</label>
+                                                            for="basic-checkbox">Ingat saya</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
-                                                    <a class="fs--1 fw-semi-bold" href="{{ route('password.request') }}">Forgot Password?</a>
+                                                    <a class="fs--1 fw-semi-bold" href="{{ route('password.request') }}">Lupa Kata Sandi?</a>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary w-100 mb-3" type="submit">Sign In</button>
+                                            <button class="btn btn-primary w-100 mb-3" type="submit">Masuk</button>
                                         </form>
                                         <div class="text-center">
-                                            <a class="fs--1 fw-bold" href="{{ route('register') }}">Create an
-                                                account</a>
+                                            <a class="fs--1 fw-bold" href="{{ route('register') }}">Buat akun baru</a>
                                         </div>
                                     </div>
                                 </div>

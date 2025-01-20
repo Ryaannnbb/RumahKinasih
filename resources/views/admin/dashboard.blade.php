@@ -8,7 +8,7 @@
             <div class="row g-4">
                 <div class="col-12 col-xxl-6">
                     <div class="mb-8">
-                        <h2 class="mb-2">Beranda Rumah Kinasih</h2>
+                        <h2 class="mb-2">Dashboard Rumah Kinasih</h2>
                     </div>
                     <div class="row align-items-center g-4">
                         <div class="col-12 col-md-auto">
@@ -21,7 +21,7 @@
                                 <div class="ms-3">
                                     <h4 class="mb-0">{{ $batik->count() }} Produk yang tersedia</h4>
                                     @if($batik->count() > 0)
-                                        <p class="text-800 fs--1 mb-0">Awaiting processing</p>
+                                        <p class="text-800 fs--1 mb-0">Menunggu diproses</p>
                                     @else
                                         <p class="text-800 fs--1 mb-0">No batik available</p>
                                     @endif
@@ -36,9 +36,9 @@
                                     <span class="fa-stack-1x fa-solid fa-check text-success" data-fa-transform="shrink-2 up-8 right-6"></span>
                                 </span>
                                 <div class="ms-3">
-                                    <h4 class="mb-0">{{ $adminlist->count() }} available admins</h4>
+                                    <h4 class="mb-0">{{ $adminlist->count() }} Admin</h4>
                                     @if($adminlist->count() > 0)
-                                        <p class="text-800 fs--1 mb-0">On hold</p>
+                                        <p class="text-800 fs--1 mb-0"></p>
                                     @else
                                         <p class="text-800 fs--1 mb-0">No admins available</p>
                                     @endif
@@ -53,11 +53,11 @@
                                     <span class="fa-stack-1x fa-solid fa-pause text-warning" data-fa-transform="shrink-2 up-8 right-6"></span>
                                 </span>
                                 <div class="ms-3">
-                                    <h4 class="mb-0">{{ $approval->count() }}</h4>
+                                    <h4 class="mb-0">{{ $approval->count() }} Permintaan</h4>
                                     @if($approval->count() > 0)
-                                        <p class="text-800 fs--1 mb-0">There are requests</p>
+                                        <p class="text-800 fs--1 mb-0">Menunggu persetujuan</p>
                                     @else
-                                        <p class="text-800 fs--1 mb-0">No requests</p>
+                                        <p class="text-800 fs--1 mb-0"></p>
                                     @endif
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <h5 class="mb-1">Total produk yangg dibuat setiap bulan<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"><span class="badge-label">-6.8%</span></span></h5>
+                                            <h5 class="mb-1">Total produk yang dibuat setiap bulan<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"><span class="badge-label">-6.8%</span></span></h5>
                                         </div>
                                         <h4>16,247</h4>
                                     </div>
@@ -135,8 +135,8 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <h5 class="mb-1">New customers<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"> <span class="badge-label">+26.5%</span></span></h5>
-                                            <h6 class="text-700">Last 7 days</h6>
+                                            <h5 class="mb-1">Pelanggan baru<span class="badge badge-phoenix badge-phoenix-warning rounded-pill fs--1 ms-2"> <span class="badge-label">+26.5%</span></span></h5>
+                                            <h6 class="text-700">7 hari terakhir</h6>
                                         </div>
                                         <h4>356</h4>
                                     </div>
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-white pt-7 border-y border-300">
+        {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-white pt-7 border-y border-300">
             <div data-list='{"valueNames":["product","customer","rating","review","time"],"page":6}'>
                 <div class="row align-items-end justify-content-between pb-5 g-3">
                     <div class="col-auto">
@@ -232,11 +232,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <footer class="footer position-absolute">
             <div class="row g-0 justify-content-between align-items-center h-100">
                 <div class="col-12 col-sm-auto text-center">
-                    <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
+                    <p class="mb-0 mt-2 mt-sm-0 text-900">Terima kasih Rumah Kinasih telah mempercayai kami!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
                 </div>
             </div>
         </footer>

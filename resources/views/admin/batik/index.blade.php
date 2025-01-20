@@ -14,7 +14,7 @@
         <div class="mb-4">
           <div class="d-flex flex-wrap gap-3">
             <div class="search-box">
-              <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search" type="search" placeholder="Search products" aria-label="Search" />
+              <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search" type="search" placeholder="Cari batik" aria-label="Search" />
                 <span class="fas fa-search search-box-icon"></span>
               </form>
             </div>
@@ -38,7 +38,7 @@
                     <th class="sort align-middle white-space-nowrap ps-4" scope="col" style="width:150px;">NAMA BAHAN</th>
                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">SERI PRODUK</th>
                     <th class="sort align-middle ps-4" scope="col" style="width:200px;">DESKRIPSI</th>
-                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">DIBUAT PADA</th>
+                    <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">TANGGAL DITAMBAHKAN</th>
                     <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                 </tr>
               </thead>
@@ -135,7 +135,7 @@
                 <div class="col-auto d-flex">
                     <p class="mb-0 d-none d-sm-block me-3 fw-semi-bold text-900" data-list-info="data-list-info"></p>
                     <a class="fw-semi-bold" href="#!" data-list-view="*">Lihat semua<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
-                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
+                    <a class="fw-semi-bold d-none" href="#!" data-list-view="less">Lihat sedikit<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
                 </div>
                 <div class="col-auto d-flex">
                     <button class="page-link" data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
@@ -150,7 +150,7 @@
     <footer class="footer position-absolute">
         <div class="row g-0 justify-content-between align-items-center h-100">
           <div class="col-12 col-sm-auto text-center">
-            <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
+            <p class="mb-0 mt-2 mt-sm-0 text-900">Terima kasih Rumah Kinasih telah mempercayai kami!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
           </div>
         </div>
       </footer>

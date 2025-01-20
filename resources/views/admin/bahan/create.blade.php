@@ -6,8 +6,8 @@
         @csrf
         <div class="row g-3 flex-between-end mb-5">
             <div class="col-auto">
-                <h2 class="mb-2">Tambah Produk</h2>
-                <h5 class="text-700 fw-semi-bold">Wajib diisi semua sebelum menambahkan produk baru</h5>
+                <h2 class="mb-2">Tambah Bahan</h2>
+                <h5 class="text-700 fw-semi-bold">Wajib diisi semua sebelum menambahkan bahan baru.</h5>
             </div>
             <div class="col-auto">
                 <a class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" href="{{ route('bahan.store') }}">Batalkan</a>

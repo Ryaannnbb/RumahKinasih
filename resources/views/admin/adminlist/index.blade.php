@@ -7,13 +7,13 @@
     <div class="mb-9">
         <div class="row g-3 mb-4">
             <div class="col-auto">
-                <h2 class="mb-0">Admin List and Approval</h2>
+                <h2 class="mb-0">List Admin dan Persetujuan</h2>
             </div>
         </div>
         <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
-                    <span>All</span>
+                    <span>Semua</span>
                     <span class="text-700 fw-semi-bold">({{ $adminList->count() }})</span>
                 </a>
             </li>
@@ -37,10 +37,10 @@
                             <tr>
                                 <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">NO</th>
                                 <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:70px;"></th>
-                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">EMAIL ADDRESS</th>
-                                <th class="sort align-middle ps-4" scope="col" style="width:150px;">NAME</th>
-                                <th class="sort align-middle ps-4" scope="col" style="width:150px;">ROLE</th>
-                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">CREATED AT</th>
+                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:350px;">EMAIL</th>
+                                <th class="sort align-middle ps-4" scope="col" style="width:150px;">NAMA</th>
+                                <th class="sort align-middle ps-4" scope="col" style="width:150px;">STATUS</th>
+                                <th class="sort white-space-nowrap align-middle ps-4" scope="col" style="width:50px;">TANGGAL DIBUAT</th>
                                 <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                             </tr>
                         </thead>
@@ -109,7 +109,7 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end py-2">
                                             {{-- <a class="dropdown-item" href="{{ route('adminList.edit', $item->id) }}">Edit</a> --}}
-                                            @if ($item->role == 'waiting')
+                                            @if ($item->role == 'belum disetujui')
                                             <form action="{{ route('adminlist.approve', $item->id) }}" method="POST">
                                             @method('PATCH')
                                             @csrf
@@ -120,7 +120,7 @@
                                             <form action="{{ route('adminlist.destroy', $item->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="dropdown-item text-danger hapus">Remove</button>
+                                                <button type="submit" class="dropdown-item text-danger hapus">Hapus</button>
                                             </form>
                                         </div>
                                     </div>
@@ -152,7 +152,7 @@
     <footer class="footer position-absolute">
         <div class="row g-0 justify-content-between align-items-center h-100">
           <div class="col-12 col-sm-auto text-center">
-            <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for trusting us, Rumah Kinasih!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
+            <p class="mb-0 mt-2 mt-sm-0 text-900">Terima kasih Rumah Kinasih telah mempercayai kami!<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy; FryPen</p>
           </div>
         </div>
       </footer>
