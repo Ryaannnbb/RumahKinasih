@@ -78,51 +78,43 @@
                                     </div>
                                     <div class="d-flex justify-content-center px-4 py-6">
                                         <div id="chart" style="height:550px;width:100%"></div>
-                                    </div>
-                                    <script>
-                                        var options = {
-                                            chart: {
-                                                height: 280,
-                                                type: "area"
-                                            },
-                                            dataLabels: {
-                                                enabled: false
-                                            },
-                                            series: [
-                                                {
-                                                    name: "Produk yang dibuat",
-                                                    data: [45, 52, 38, 45, 19, 23, 2]
+                                        </div>
+                                        <script>
+                                            var options = {
+                                                chart: {
+                                                    height: 280,
+                                                    type: "area"
+                                                },
+                                                dataLabels: {
+                                                    enabled: false
+                                                },
+                                                series: [
+                                                    {
+                                                        name: "Produk yang dibuat",
+                                                        data: @json($dataProduk) // Gunakan data dari controller
+                                                    }
+                                                ],
+                                                fill: {
+                                                    type: "gradient",
+                                                    gradient: {
+                                                        shadeIntensity: 1,
+                                                        opacityFrom: 0.7,
+                                                        opacityTo: 0.9,
+                                                        stops: [0, 90, 100]
+                                                    }
+                                                },
+                                                xaxis: {
+                                                    categories: [
+                                                        "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                                                        "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+                                                    ]
                                                 }
-                                            ],
-                                            fill: {
-                                                type: "gradient",
-                                                gradient: {
-                                                    shadeIntensity: 1,
-                                                    opacityFrom: 0.7,
-                                                    opacityTo: 0.9,
-                                                    stops: [0, 90, 100]
-                                                }
-                                            },
-                                            xaxis: {
-                                                categories: [
-                                                    "Januari",
-                                                    "Febuari",
-                                                    "Maret",
-                                                    "April",
-                                                    "Mei",
-                                                    "Juni",
-                                                    "Juli",
-                                                    "Agustus",
-                                                    "September",
-                                                    "Oktober",
-                                                    "November",
-                                                    "Desember",
-                                                ]
-                                            }
-                                        };
-                                        var chart = new ApexCharts(document.querySelector("#chart"), options);
-                                        chart.render();
-                                    </script>
+                                            };
+
+                                            var chart = new ApexCharts(document.querySelector("#chart"), options);
+                                            chart.render();
+                                        </script>
+
                                     {{-- <div class="mt-2">
                                         <div class="d-flex align-items-center mb-2">
                                             <div class="bullet-item bg-primary me-2"></div>
