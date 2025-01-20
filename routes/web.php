@@ -85,7 +85,6 @@ Route::middleware([AdminMiddleware::class])->group(function () {
         Route::get('/', 'index')->name('transaksi.index');
         Route::get('create', 'create')->name('transaksi.create');
         Route::post('store', 'store')->name('transaksi.store');
-        Route::get('show/{id}', 'show')->name('transaksi.show');
         Route::get('edit/{id}', 'edit')->name('transaksi.edit');
         Route::put('update/{id}', 'update')->name('transaksi.update');
         Route::delete('destroy/{id}', 'destroy')->name('transaksi.destroy');
